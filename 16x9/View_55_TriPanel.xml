@@ -5,7 +5,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
 			<include>ViewAnimation</include>
-			<top>-25</top>
+			<top>-32</top>
 			<control type="group">
 				<left>1400</left>
 				<top>136</top>
@@ -30,10 +30,10 @@
 						<visible>!String.IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 					</control>
 					<control type="button">
-						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[126]:[/COLOR][CR]$INFO[Window(Home).Property(TMDbHelper.ListItem.Status)]</label>
+						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[126]:[/COLOR][CR]$INFO[Container(9143).ListItem.Property(Status)]</label>
 						<width>448</width>
 						<include>DefaultButtonsValues</include>
-						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status))</visible>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Container(9143).ListItem.Property(Status))</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
@@ -49,16 +49,16 @@
 						<visible>[[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(Disable.NextAired)] | Container.Content(episodes)</visible>
 					</control>
 					<control type="button">
-						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[31010]: [/COLOR][CR]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired),, • ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Season),S]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Episode),E, - ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Name)]</label>
+						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[31010]: [/COLOR][CR]$INFO[Container(9143).ListItem.Property(Next_Aired),, • ]$INFO[Container(9143).ListItem.Property(Next_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Next_Aired.Episode),E, - ]$INFO[Container(9143).ListItem.Property(Next_Aired.Name)]</label>
 						<width>448</width>
 						<include>DefaultButtonsValues</include>
-						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + ![String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) | String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired))] + !Skin.HasSetting(Disable.NextAired)</visible>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + ![String.IsEmpty(Container(9143).ListItem.Property(Next_Aired)) | String.IsEmpty(Container(9143).ListItem.Property(Last_Aired))] + !Skin.HasSetting(Disable.NextAired)</visible>
 					</control>
 					<control type="button">
-						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[31011]: [/COLOR][CR]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired),, • ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Season),S]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Episode),E, - ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Name)]</label>
+						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[31011]: [/COLOR][CR]$INFO[Container(9143).ListItem.Property(Last_Aired),, • ]$INFO[Container(9143).ListItem.Property(Last_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Last_Aired.Episode),E, - ]$INFO[Container(9143).ListItem.Property(Last_Aired.Name)]</label>
 						<width>448</width>
 						<include>DefaultButtonsValues</include>
-						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired)) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) + !Skin.HasSetting(Disable.NextAired)</visible>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Container(9143).ListItem.Property(Last_Aired)) + String.IsEmpty(Container(9143).ListItem.Property(Next_Aired)) + !Skin.HasSetting(Disable.NextAired)</visible>
 					</control>
 					<control type="button">
 						<label>[COLOR $VAR[ThemeLabelColor]]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
@@ -152,7 +152,7 @@
 					<width>570</width>
 					<height>835</height>
 					<aspectratio aligny="bottom" align="right">scale</aspectratio>
-					<texture colordiffuse="00FFFFFF">black.png</texture>
+					<texture>colors/black10.png</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -350,28 +350,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
-						</control>
-						<control type="group">
-							<left>742</left>
-							<control type="image">
-								<top>3</top>
-								<width>64</width>
-								<height>64</height>
-								<texture>overlays/list/OverlayUnWatched.png</texture>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
-							</control>
-							<control type="label">
-								<left>-18</left>
-								<width>100</width>
-								<height>68</height>
-								<font>font12_title</font>
-								<align>center</align>
-								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textcolor>grey3</textcolor>
-								<textoffsetx>18</textoffsetx>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-							</control>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayShowsVar]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="806" condition="Container.Content(tvshows)">
@@ -415,27 +394,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
-						</control>
-						<control type="group">
-							<left>742</left>
-							<control type="image">
-								<top>3</top>
-								<width>64</width>
-								<height>64</height>
-								<texture>overlays/list/OverlayUnWatched.png</texture>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
-							</control>
-							<control type="label">
-								<left>-18</left>
-								<width>100</width>
-								<height>68</height>
-								<font>font12_title</font>
-								<align>center</align>
-								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textoffsetx>18</textoffsetx>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-							</control>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayShowsVar]</texture>
 						</control>
 					</focusedlayout>
 					<itemlayout height="70" width="806" condition="Container.Content(episodes)">
@@ -525,28 +484,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
-						</control>
-						<control type="group">
-							<left>742</left>
-							<control type="image">
-								<top>3</top>
-								<width>64</width>
-								<height>64</height>
-								<texture>overlays/list/OverlayUnWatched.png</texture>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
-							</control>
-							<control type="label">
-								<left>-18</left>
-								<width>100</width>
-								<height>68</height>
-								<font>font12_title</font>
-								<align>center</align>
-								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textcolor>grey3</textcolor>
-								<textoffsetx>18</textoffsetx>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-							</control>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayShowsVar]</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout height="70" width="806" condition="Container.Content(seasons)">
@@ -580,27 +518,7 @@
 							<width>64</width>
 							<height>64</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlay]</texture>
-						</control>
-						<control type="group">
-							<left>742</left>
-							<control type="image">
-								<top>3</top>
-								<width>64</width>
-								<height>64</height>
-								<texture>overlays/list/OverlayUnWatched.png</texture>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
-							</control>
-							<control type="label">
-								<left>-18</left>
-								<width>100</width>
-								<height>68</height>
-								<font>font12_title</font>
-								<align>center</align>
-								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textoffsetx>18</textoffsetx>
-								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
-							</control>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">$VAR[ListItemOverlayShowsVar]</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -771,20 +689,10 @@
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
-					<left>30</left>
-					<top>532</top>
-					<width>540</width>
-					<height>570</height>
-					<aspectratio aligny="top" align="right">scale</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
-					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
-					<bordersize>20</bordersize>
-				</control>
-				<control type="image">
 					<left>550</left>
 					<top>58</top>
 					<width>80</width>
-					<height>720</height>
+					<height>450</height>
 					<texture flipx="true" border="1">side_shadow.png</texture>
 				</control>
 			</control>
@@ -942,7 +850,7 @@
 					<left>822</left>
 					<top>114</top>
 					<width>40</width>
-					<height>795</height>
+					<height>530</height>
 					<texture flipx="true" border="1">side_shadow.png</texture>
 				</control>
 			</control>

@@ -163,7 +163,7 @@
 						<top>310</top>
 						<width>420</width>
 						<height>50</height>
-						<texture>black.png</texture>
+						<texture>colors/black.png</texture>
 						<bordersize>2</bordersize>
 						<colordiffuse>88ffffff</colordiffuse>
 					</control>
@@ -174,7 +174,7 @@
 						<align>center</align>
 						<textoffsetx>10</textoffsetx>
 						<textcolor>grey2</textcolor>
-						<info>ListItem.Label</info>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="360" width="420" condition="![Container.Content(addons) | Container.Content(genres) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]">
@@ -214,7 +214,7 @@
 							<top>310</top>
 							<width>408</width>
 							<height>44</height>
-							<texture>black.png</texture>
+							<texture>colors/black.png</texture>
 							<bordersize>2</bordersize>
 							<colordiffuse>88ffffff</colordiffuse>
 						</control>
@@ -224,15 +224,15 @@
 							<height>40</height>
 							<align>center</align>
 							<textoffsetx>10</textoffsetx>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="50060">
-				<left>1800</left>
+				<left>1802</left>
 				<top>179</top>
-				<width>12</width>
+				<width>10</width>
 				<height>720</height>
 				<onleft>50</onleft>
 				<onright condition="!Control.IsVisible(615)">SetProperty(MediaMenu,True,Home)</onright>
@@ -286,7 +286,7 @@
 							<top>190</top>
 							<width>240</width>
 							<height>50</height>
-							<texture>black.png</texture>
+							<texture>colors/black.png</texture>
 							<bordersize>2</bordersize>
 							<colordiffuse>88ffffff</colordiffuse>
 						</control>
@@ -297,7 +297,7 @@
 							<align>center</align>
 							<textoffsetx>4</textoffsetx>
 							<textcolor>grey</textcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</control>
 				</itemlayout>
@@ -388,9 +388,9 @@
 						<bordersize>2</bordersize>
 					</control>
 					<control type="image">
-						<left>140</left>
-						<width>100</width>
-						<height>100</height>
+						<left>190</left>
+						<width>50</width>
+						<height>50</height>
 						<texture>overlays/addons/enabled.png</texture>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<visible>ListItem.Property(Addon.IsInstalled)</visible>
@@ -398,30 +398,28 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="240" width="240">
-					<control type="image">
-						<width>240</width>
-						<height>240</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture colordiffuse="$VAR[ThemeLabelColor]" border="8">thumbs/thumbnail_focused.png</bordertexture>
-						<bordersize>8</bordersize>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
-							<effect type="fade" start="80" end="100" time="300" tween="sine" easing="in" />
-						</animation>
-					</control>
-					<control type="image">
-						<left>140</left>
-						<width>100</width>
-						<height>100</height>
-						<texture>overlays/addons/enabled.png</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<visible>ListItem.Property(Addon.IsInstalled)</visible>
-						<bordersize>8</bordersize>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
-							<effect type="fade" start="80" end="100" time="300" tween="sine" easing="in" />
-						</animation>
+					<control type="group">
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="95" end="100" time="300" tween="sine" easing="inout" center="auto" />
+								<effect type="fade" start="80" end="100" time="300" tween="sine" easing="in" />
+							</animation>
+						<control type="image">
+							<width>240</width>
+							<height>240</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture colordiffuse="$VAR[ThemeLabelColor]" border="8">thumbs/thumbnail_focused.png</bordertexture>
+							<bordersize>8</bordersize>
+						</control>
+						<control type="image">
+							<left>190</left>
+							<width>50</width>
+							<height>50</height>
+							<texture>overlays/addons/enabled.png</texture>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+							<visible>ListItem.Property(Addon.IsInstalled)</visible>
+							<bordersize>8</bordersize>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>
@@ -482,7 +480,7 @@
 						<top>250</top>
 						<width>560</width>
 						<height>50</height>
-						<texture>black.png</texture>
+						<texture>colors/black.png</texture>
 						<bordersize>2</bordersize>
 						<colordiffuse>88ffffff</colordiffuse>
 					</control>
@@ -492,7 +490,7 @@
 						<height>30</height>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey2</textcolor>
-						<info>ListItem.Label</info>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
 						<top>260</top>
@@ -501,7 +499,7 @@
 						<align>right</align>
 						<textoffsetx>15</textoffsetx>
 						<textcolor>grey2</textcolor>
-						<info>ListItem.Label2</info>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="300" width="560">
@@ -526,7 +524,7 @@
 							<top>250</top>
 							<width>560</width>
 							<height>50</height>
-							<texture>black.png</texture>
+							<texture>colors/black.png</texture>
 							<bordersize>2</bordersize>
 							<colordiffuse>88ffffff</colordiffuse>
 						</control>
@@ -536,7 +534,7 @@
 							<height>30</height>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey2</textcolor>
-							<info>ListItem.Label</info>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
 							<top>260</top>
@@ -545,7 +543,7 @@
 							<align>right</align>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey2</textcolor>
-							<info>ListItem.Label2</info>
+							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</control>
 				</focusedlayout>

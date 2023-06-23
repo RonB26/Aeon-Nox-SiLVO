@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/kodi-skins/language/sk_SK/)\n"
+"PO-Revision-Date: 2023-05-13 21:16+0000\n"
+"Last-Translator: Patrik Špaňo <patrik.spano@gmail.com>\n"
+"Language-Team: Slovak <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-aeon-nox-silvo/sk_sk/>\n"
+"Language: sk_sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sk_SK\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.15.2\n"
 
 msgctxt "#31000"
 msgid "Directed by"
@@ -457,12 +458,12 @@ msgid "Unwatched episode count"
 msgstr "Počet nevidených epizód"
 
 msgctxt "#31110"
-msgid "Colorbox Script provides the blurred images for the Music and Video info dialogs as well as the fullscreen music blurred background."
-msgstr "Skript poskytuje rozmazané obrázky pre dialógy s informáciami o hudbe a videách, ako aj pozadia pri prehrávaní hudby v režime celej obrazovky."
+msgid "Solid color backgrounds"
+msgstr "Jednofarebné pozadie"
 
 msgctxt "#31111"
-msgid "Similar movies"
-msgstr "Podobné filmy"
+msgid "Similar"
+msgstr ""
 
 msgctxt "#31112"
 msgid "Movies directed by"
@@ -470,15 +471,11 @@ msgstr "Filmy režírované"
 
 msgctxt "#31113"
 msgid "Movies written by"
-msgstr "Filmy napísané "
+msgstr "Filmy napísané"
 
 msgctxt "#31114"
 msgid "More from"
 msgstr "Viac od"
-
-msgctxt "#31115"
-msgid "Similar TV shows"
-msgstr "Podobné seriály"
 
 msgctxt "#31116"
 msgid "cycle fanart"
@@ -521,8 +518,8 @@ msgid "Show Background \"Now Playing\" Visualisation"
 msgstr "Zobrazovať vizualizáciu na pozadí"
 
 msgctxt "#31126"
-msgid "Skin Helper Service adds extra information for the skin to display that is not normally available in Kodi."
-msgstr "Skin Helper Service poskytuje vzhľadu na zobrazenie extra informácie, ktoré nie sú v Kodi bežne dostupné."
+msgid "TheMovieDb Helper provides details about movies, tvshows and actors from TMDb."
+msgstr "TheMovieDb Helper poskytuje detaily o filmoch, seriáloch a hercoch z TMDb."
 
 msgctxt "#31127"
 msgid "Enable Extended Info integration"
@@ -602,7 +599,7 @@ msgstr "Skryť Vyhľadávanie"
 
 msgctxt "#31146"
 msgid "Rated"
-msgstr "Hodnotené"
+msgstr "Prístupnosť"
 
 msgctxt "#31147"
 msgid "Change rating"
@@ -614,7 +611,7 @@ msgstr "IMDb logo"
 
 msgctxt "#31149"
 msgid "Online information from TMDb"
-msgstr "Online informácie  z TMDb"
+msgstr "Online informácie z TMDb"
 
 msgctxt "#31150"
 msgid "IMDb logo"
@@ -802,11 +799,11 @@ msgstr "Zobraziť zostávajúci čas v informáciách na celej obrazovke"
 
 msgctxt "#31196"
 msgid "Replace default with Extended Info (some features and extras (+) will be unavailable)"
-msgstr "Replace default with Extended Info (some features and extras (+) will be unavailable)"
+msgstr "Nahradiť predvolené info Rozšírenými informáciami (niektoré funkcie a doplnky (+) nebudú k dispozícii)"
 
 msgctxt "#31197"
 msgid "Enable info rating (works with US Ratings only)"
-msgstr "Enable info rating (works with US Ratings only)"
+msgstr ""
 
 msgctxt "#31198"
 msgid "This setting controls the appearance of cases when using Live Backgrounds"
@@ -918,7 +915,7 @@ msgstr "Zobrazenie času na priebehovej lište"
 
 msgctxt "#31225"
 msgid "Time remaining label"
-msgstr "Time remaining label"
+msgstr "Štítok zostávajúceho času"
 
 msgctxt "#31226"
 msgid "Time elapsed/Total duration"
@@ -954,7 +951,7 @@ msgstr "Skryť artwork"
 
 msgctxt "#31234"
 msgid "Next aired"
-msgstr "Next aired"
+msgstr "Nasledujúce vysielanie"
 
 msgctxt "#31235"
 msgid "Slide Left"
@@ -966,7 +963,7 @@ msgstr "Posunúť vpravo"
 
 msgctxt "#31237"
 msgid "Cache tv extrafanart"
-msgstr "Cache tv extrafanart"
+msgstr "Mezipamäť tv extrafanart"
 
 msgctxt "#31238"
 msgid "SongList"
@@ -1166,7 +1163,7 @@ msgstr "Nepriehľadnosť"
 
 msgctxt "#31287"
 msgid "Show list widget information"
-msgstr "Show list widget information"
+msgstr ""
 
 msgctxt "#31288"
 msgid "Enable panel widget information"
@@ -1270,7 +1267,7 @@ msgstr "Režim SiLVO"
 
 msgctxt "#31313"
 msgid "Let It Snow! Let It Snow! Let It Snow!"
-msgstr "Sneženie"
+msgstr "Nech sneží! Nech sneží! Nech sneží!"
 
 msgctxt "#31314"
 msgid "Panel"
@@ -1326,7 +1323,7 @@ msgstr "Toto sú DOPORUČENÉ skripty, pridávajúce doplňujúce funkcie. Nie s
 
 msgctxt "#31327"
 msgid "These are OPTIONAL scripts that add extra features. They are not needed for basic skin functionality. Some OPTIONAL scripts may be unsuitable for low performance devices."
-msgstr "Toto sú VOLITEĽNÉ skripty pridávajúce extra funkcie.  Nie sú nevyhnutné pre základné funkcie vzhľadu. Niektoré VOLITEĽNÉ skripty môžu byť nepoužiteľné na zariadeniach so slabým výkonom."
+msgstr "Toto sú VOLITEĽNÉ skripty pridávajúce extra funkcie. Nie sú nevyhnutné pre základné funkcie vzhľadu. Niektoré VOLITEĽNÉ skripty môžu byť nepoužiteľné na zariadeniach so slabým výkonom."
 
 msgctxt "#31328"
 msgid "Recently Added"
@@ -1345,8 +1342,8 @@ msgid "Installed"
 msgstr "Nainštalovaný"
 
 msgctxt "#31332"
-msgid "Not Installed"
-msgstr "Nenainštalovaný"
+msgid "Not Installed or Disabled"
+msgstr "Nenainštalované alebo Zakázané"
 
 msgctxt "#31333"
 msgid "The default behavior is to display Music information for 10 seconds after a song is played or the next track in your queue begins. To display permanently reactivate the info and do not toggle it off a second time."
@@ -1430,7 +1427,7 @@ msgstr "Neaktívne"
 
 msgctxt "#31353"
 msgid "Shows an overview of the movie or episode 5 seconds after the video is paused."
-msgstr "Shows an overview of the movie or episode 5 seconds after the video is paused."
+msgstr "Zobrazí prehľad filmu alebo epizódy 5 sekúnd po pozastavení videa."
 
 msgctxt "#31354"
 msgid "Fade unfocused"
@@ -1474,7 +1471,7 @@ msgstr "Žiadne EPG"
 
 msgctxt "#31364"
 msgid "Timeshift"
-msgstr "Timeshift"
+msgstr "Časový posun"
 
 msgctxt "#31365"
 msgid "Customization"
@@ -1506,7 +1503,7 @@ msgstr "Nastavenie zobrazenia a miniaplikácie so zápletkou"
 
 msgctxt "#31372"
 msgid "Choose if library views and widgets should display plot outline or full plot. Falls back to full plot if no outline is available. This does not effect certain areas with limited space for the plot that have this enabled by default"
-msgstr "Voľba, či v zobrazeniach knižnice a miniaplikáciách bude zobrazená kompletná zápletka, alebo len jej načrtnutie. Ak načrtnutie zápletky nie je k dispozícii, bude zobrazená kompletná zápletka. Toto nemá vplyv pri niektorých zobrazeniach s obmedzeným priestorom, ktoré majú túto voľbu prednastavenú."
+msgstr "Vyberte, či sa má v zobrazeniach knižnice a miniaplikáciách (widgetoch) bude zobrazená kompletná zápletka, alebo len jej načrtnutie. Ak načrtnutie zápletky nie je k dispozícii, bude zobrazená kompletná zápletka. Toto nemá vplyv pri niektorých zobrazeniach s obmedzeným priestorom, ktoré majú túto voľbu prednastavenú"
 
 msgctxt "#31373"
 msgid "Customize the colors displayed throughout the skin."
@@ -1574,11 +1571,11 @@ msgstr "Toto nastavenie aktivuje zobrazenie obalu pre informácie, ktoré sa zob
 
 msgctxt "#31389"
 msgid "Global setting that shows the information for the focused item above or below depending on the PANEL widget location. This will override any per-widget settings and has NO effect on LIST widgets."
-msgstr "Global setting that shows the information for the focused item above or below depending on the PANEL widget location. This will override any per-widget settings and has NO effect on LIST widgets."
+msgstr "Globálne nastavenie, ktoré zobrazuje informácie pre vybranú položku nad alebo pod ňou v závislosti od umiestnenia widgetu PANEL. Toto prepíše všetky nastavenia pre jednotlivé widgety a nemá ŽIADNY vplyv na widgety ZOZNAM."
 
 msgctxt "#31390"
 msgid "Skin default"
-msgstr "Predvolené vzhľadom"
+msgstr "Predvolený vzhľad"
 
 msgctxt "#31391"
 msgid "Arial"
@@ -1586,7 +1583,7 @@ msgstr "Arial"
 
 msgctxt "#31392"
 msgid "When enabled all widgets will be hidden until you have navigated to it."
-msgstr "When enabled all widgets will be hidden until you have navigated to it."
+msgstr "Ak je táto funkcia povolená, všetky widgety budú skryté, dokým na ne neprejdete."
 
 msgctxt "#31393"
 msgid "Ends at"
@@ -1650,7 +1647,7 @@ msgstr "[B]KONFIGURÁCIA PROFILOV[/B][CR]Nastavenie a správa užívateľských 
 
 msgctxt "#31408"
 msgid "Enable to show a LiveTV widget displaying what is currently recording and the next timer that is scheduled to record."
-msgstr "Enable to show a LiveTV widget displaying what is currently recording and the next timer that is scheduled to record."
+msgstr "Povolenie zobrazenia widgetu Živého TV vysielania, ktorý zobrazuje aktuálne nahrávanie a nasledujúci časovač naplánovaného nahrávania."
 
 msgctxt "#31409"
 msgid "[B]CONFIGURE LIVE TV SETTINGS[/B][CR]Change full screen info[CR]Manage Guide data settings  •  Configure recording options"
@@ -1666,7 +1663,7 @@ msgstr "Prepíše farbu hlavnej témy."
 
 msgctxt "#31412"
 msgid "Select section"
-msgstr "Select section"
+msgstr "Vybrať sekciu"
 
 msgctxt "#31413"
 msgid "Local subtitle available"
@@ -1677,8 +1674,8 @@ msgid "Set the Main Theme color used throughout the skin."
 msgstr "Nastavenie farby hlavnej témy, ktorá bude použitá vo vačšine častí vzhľadu."
 
 msgctxt "#31415"
-msgid "Set the Highlight Bar color used throughout the skin."
-msgstr "Nastavenie farby zvýraznenia, ktorá bude použitá vo vačšine častí vzhľadu."
+msgid "Set the Highlight color used throughout the skin."
+msgstr ""
 
 msgctxt "#31416"
 msgid "Set to add color to the UnWatched Episode count."
@@ -1694,7 +1691,7 @@ msgstr "Nastavenie farby hornej lišty v prehľadoch a iných sekciách mimo dom
 
 msgctxt "#31419"
 msgid "Enable this to change the default transparent color to a more solid FULL COLOR image."
-msgstr "Enable this to change the default transparent color to a more solid FULL COLOR image."
+msgstr "Povolením tejto možnosti zmeníte predvolenú priehľadnú farbu na jednoliaty PLNO FAREBNÝ obrázok."
 
 msgctxt "#31420"
 msgid "Choose the color of the Progress bar displayed during fullscreen video playback."
@@ -1734,7 +1731,7 @@ msgstr "Skript Grab Fanart poskytuje náhodnú prehliadku fanartov pre hlavnú p
 
 msgctxt "#31429"
 msgid "Library Data Provider is a service that runs in the background to provide library data for widgets and live backgrounds as well as playlist statistics for infolines."
-msgstr "Library Data Provider je služba bežiaca na pozadí. Miniaplikáciám a živým pozadiam poskytuje z mediálnych knižníc potrebné údaje, napr. rôzne štatistiky, playlisty, a pod."
+msgstr "Library Data Provider je služba, ktorá beží na pozadí a poskytuje údaje z mediálnych knižníc pre widgety a živé pozadia, ako aj štatistiku playlistov pre infolinky."
 
 msgctxt "#31430"
 msgid "Resource image addon for displaying the default white studio icons throughout the skin."
@@ -1754,7 +1751,7 @@ msgstr "Skin Info Service je doplnok využívaný na zobrazovanie informácií z
 
 msgctxt "#31434"
 msgid "Alt fanart"
-msgstr "Alt fanart"
+msgstr "Alternatívny fanart"
 
 msgctxt "#31435"
 msgid "Alt icon"
@@ -1821,8 +1818,8 @@ msgid "  •  Open Settings "
 msgstr "  •  Otvoriť nastavenia "
 
 msgctxt "#31451"
-msgid "  •  Click to Install"
-msgstr "  •  Kliknutím nainštalovať"
+msgid "  •  Click to Install or Enable"
+msgstr "  •  Kliknite pre Inštaláciu alebo Povolenie"
 
 msgctxt "#31452"
 msgid "Premiered"
@@ -1858,7 +1855,7 @@ msgstr "Skupiny rádií"
 
 msgctxt "#31460"
 msgid "Mini fullscreen info"
-msgstr "Mini fullscreen info"
+msgstr ""
 
 msgctxt "#31461"
 msgid "This option requires a Weather fanart pack. If one is not installed, click GET MORE to choose one. After installation you can select it as your weather background. This is also used to display conditional Weather backgrounds for the Main Menu."
@@ -1882,7 +1879,7 @@ msgstr "Informácie o hudbe a videu"
 
 msgctxt "#31466"
 msgid "Press [B]LEFT[/B] to show Plot[CR]Press [B]RIGHT[/B] to show Cast.[CR]Use [B]UP[/B] or [B]DOWN[/B] to scroll."
-msgstr "Stlačte  [B]VĽAVO[/B] pre zobrazenie zápletky.[CR]Stlačte [B]VPRAVO[/B] pre zobrazenie obsadenia.[CR]Použite [B]NAHOR/B] alebo  [B]NADOL[/B] pre posun/rolovanie."
+msgstr "Stlačte [B]VĽAVO[/B] pre zobrazenie zápletky.[CR]Stlačte [B]VPRAVO[/B] pre zobrazenie obsadenia.[CR]Použite [B]NAHOR[/B] alebo [B]NADOL[/B] pre posun/rolovanie."
 
 msgctxt "#31467"
 msgid "This will disable the TopBar completely and ignore all on/off view settings."
@@ -1909,16 +1906,16 @@ msgid "Library using Kodi"
 msgstr "V knižnici pomocou Kodi"
 
 msgctxt "#31473"
-msgid "Artwork Beef is an Artwork Downloader and manager used to add or remove standard and extended artwork to your library."
-msgstr "Skript Artwork Beef je sťahovač artworkov (umeleckej grafiky) a manažér, umožňujúci pridávanie a odoberanie štandardných aj rozšírených artworkov do/z vašej knižnice."
+msgid "Helper script to edit basic metadata information of library items with support to automatically update the .nfo file of movies, TV shows, episodes and music videos."
+msgstr "Pomocný skript na úpravu základných informácií o metadátach položiek knižnice s podporou automatickej aktualizácie súboru .nfo filmov, seriálov, epizód a hudobných videí."
 
 msgctxt "#31474"
 msgid "CU LRC Lyrics is used to download, sync, and display lyrics during fullscreen music playback."
 msgstr "Skript CU LRC Lysrics umožňuje sťahovať, synchronizovať a zobrazovať texty piesní pri prehrávaní hudby v režime celej obrazovky."
 
 msgctxt "#31475"
-msgid "Skin Helper Service Widgets adds more options available as Widgets for your menu items. "
-msgstr "Skin Helper Service Widgets poskytuje množstvo možností dostupných ako miniaplikácie pre vaše položky hlavnej ponuky. "
+msgid "critics"
+msgstr ""
 
 msgctxt "#31476"
 msgid "TV - Show Next Aired provides information of previous and next to air episodes in your library. It also provides a TV Guide for the next week or two."
@@ -1937,8 +1934,8 @@ msgid "CinemaVision can create sequences of trivia slides, show video bumpers, p
 msgstr "CinemaVision umožňuje vytvoriť sekvencie jednoduchých obrázkov, zobraziť video bumpre, prehrať upútavky a omnoho viac, aby preniesol atmosféru z filmového kina priamo do vašej obývačky."
 
 msgctxt "#31480"
-msgid "Library Editor Script uses JSON to directly edit your database information."
-msgstr "Skript Library Editor využíva JSON pre priamu editáciu databázových informácií."
+msgid "Backup and restore your Kodi database and configuration files in the event of a crash or file corruption."
+msgstr "Zálohujte a obnovte svoju databázu Kodi a konfiguračné súbory pre prípad zlyhania alebo poškodenia súborov."
 
 msgctxt "#31481"
 msgid "Ubuntu condensed"
@@ -1974,7 +1971,7 @@ msgstr "Prehratí"
 
 msgctxt "#31489"
 msgid "Hide episode thumb when hiding plot for unwatched items"
-msgstr "Hide episode thumb when hiding plot for unwatched items"
+msgstr ""
 
 msgctxt "#31490"
 msgid "[B]CONFIGURE CoreELEC SETTINGS[/B][CR]Setup system option · Manage network[CR]Configure services · About CoreELEC"
@@ -1986,7 +1983,7 @@ msgstr "Stíšené"
 
 msgctxt "#31492"
 msgid "The metadata and artwork module provides both metadata and artwork from sites like TMDB, musicbrainz and fanart.tv. It has settings used for the Skin Helper scripts."
-msgstr "The metadata and artwork module provides both metadata and artwork from sites like TMDB, musicbrainz and fanart.tv. It has settings used for the Skin Helper scripts."
+msgstr ""
 
 msgctxt "#31493"
 msgid "Preset themes"
@@ -2078,7 +2075,7 @@ msgstr "Doplnok s kolekciou obrázkov pre zobrazovanie farebných ikon filmovýc
 
 msgctxt "#31515"
 msgid "Enable language flags for subtitles, audio language or both to the mediaflags. Note that some views will not display them"
-msgstr "Pridá ikony jazykov pre titulky a zvukové stopy k značkám médii. Poznámka: Nie všetky typy zobrazení ich zobrazujú."
+msgstr "Pridá ikony jazykov pre titulky a zvukové stopy k značkám médii. Poznámka: Nie všetky typy zobrazení ich zobrazujú"
 
 msgctxt "#31516"
 msgid "Disable this to show a simplified display of lyrics instead of the default \"Karaoke\" style"
@@ -2101,8 +2098,8 @@ msgid "Movies in set"
 msgstr "Filmy v kolekcii"
 
 msgctxt "#31521"
-msgid "More movies featuring"
-msgstr ", v ďalších filmoch"
+msgid "More featuring"
+msgstr ""
 
 msgctxt "#31522"
 msgid "Glow Bars for Menu Bar"
@@ -2130,7 +2127,7 @@ msgstr "Čakajte prosím"
 
 msgctxt "#31528"
 msgid "PVR stream"
-msgstr "PVR stream"
+msgstr ""
 
 msgctxt "#31529"
 msgid "Properties"
@@ -2197,8 +2194,8 @@ msgid "Years old"
 msgstr "rokov"
 
 msgctxt "#31545"
-msgid "More tv shows featuring"
-msgstr ", v ďalších seriáloch"
+msgid "Crew"
+msgstr ""
 
 msgctxt "#31546"
 msgid "Known for"
@@ -2238,7 +2235,7 @@ msgstr "Voľba ikony pre prípad, keď je vzhľad hlavnej ponuky nastavený na '
 
 msgctxt "#31555"
 msgid "Use this to set the default action without changing the label. Choose 'Custom item' for any of Kodi's built-in functions. (http://kodi.wiki/?title=List_of_Built_In_Functions)"
-msgstr "Použite, ak chcete nastaviť predvolenú akciu bez zmeny názvu položky. Zvoľte 'Užívateľská položka' pre spustenie ktorejkoľvek vstavanej funkcie Kodi.  (http://kodi.wiki/?title=List_of_Built_In_Functions)"
+msgstr "Použite, ak chcete nastaviť predvolenú akciu bez zmeny názvu položky. Zvoľte 'Užívateľská položka' pre spustenie ktorejkoľvek vstavanej funkcie Kodi. (http://kodi.wiki/?title=List_of_Built_In_Functions)"
 
 msgctxt "#31556"
 msgid "Choose the submenu items displayed below your menu for Horizontal or in the left slide out submenu for the Vertical menu."
@@ -2258,7 +2255,167 @@ msgstr "Nastavenie zobrazenia Miniaplikácie 2. Miniaplikácia 2 mení svoju pol
 
 msgctxt "#31560"
 msgid "This will enable a separate Widget displaying what is currently recording and/or the next scheduled timer. If Widget 2 is enabled on the same menu item then it will be hidden until focused."
-msgstr "Povolí zobrazenie ďalšej miniaplikácie, zobrazujúcej priebeh nahrávania, resp. ďalší naplánovaný časovač. Ak je pre tú istú položku povolená aj miniaplikácia 2, bude pri zvolení miniaplikácie 2 táto ďalšia miniaplikácia schovaná. "
+msgstr "Povolí zobrazenie ďalšej miniaplikácie, zobrazujúcej priebeh nahrávania, resp. ďalší naplánovaný časovač. Ak je pre tú istú položku povolená aj miniaplikácia 2, bude pri zvolení miniaplikácie 2 táto ďalšia miniaplikácia schovaná."
+
+msgctxt "#31561"
+msgid "Local path to music genre icon folder"
+msgstr ""
+
+msgctxt "#31562"
+msgid "Resource pack for music genre icon"
+msgstr ""
+
+msgctxt "#31563"
+msgid "Set music genre icons"
+msgstr ""
+
+msgctxt "#31564"
+msgid "Library nodes"
+msgstr ""
+
+msgctxt "#31565"
+msgid "Create a new backup"
+msgstr ""
+
+msgctxt "#31566"
+msgid "Restore from previous backup"
+msgstr ""
+
+msgctxt "#31567"
+msgid "Browse for backup"
+msgstr ""
+
+msgctxt "#31568"
+msgid "Change settings"
+msgstr ""
+
+msgctxt "#31569"
+msgid "Backup & Restore"
+msgstr ""
+
+msgctxt "#31570"
+msgid "Hide Channels"
+msgstr ""
+
+msgctxt "#31571"
+msgid "Show plots in set"
+msgstr ""
+
+msgctxt "#31572"
+msgid "Choose the preferred way to display movie set plot. All plots of movies in the set or the summary if available."
+msgstr ""
+
+msgctxt "#31573"
+msgid "Seasons falling"
+msgstr ""
+
+msgctxt "#31574"
+msgid "Preferred plot for movie sets"
+msgstr ""
+
+msgctxt "#31575"
+msgid "Kodi random music video fanart"
+msgstr ""
+
+msgctxt "#31576"
+msgid "Reboot to Android"
+msgstr ""
+
+msgctxt "#31577"
+msgid "Auto hide OSD"
+msgstr ""
+
+msgctxt "#31578"
+msgid "Random music videos"
+msgstr "Náhodné hudobné videá"
+
+msgctxt "#31579"
+msgid "Random music videos (artists)"
+msgstr ""
+
+msgctxt "#31580"
+msgid "Recent music videos"
+msgstr ""
+
+msgctxt "#31581"
+msgid "Unwatched music videos"
+msgstr "Nepozreté hudobné videá"
+
+msgctxt "#31582"
+msgid "Most played music videos"
+msgstr ""
+
+msgctxt "#31583"
+msgid "Recently added artists"
+msgstr ""
+
+msgctxt "#31584"
+msgid "Random artists"
+msgstr "Náhodní umelci"
+
+msgctxt "#31585"
+msgid "Most played songs"
+msgstr ""
+
+msgctxt "#31586"
+msgid "Prefer clean pause screen"
+msgstr ""
+
+msgctxt "#31587"
+msgid "Disable multi-search in library"
+msgstr ""
+
+msgctxt "#31588"
+msgid "Hide System Bars"
+msgstr ""
+
+msgctxt "#31589"
+msgid "Enable to hide the multi-search option in the library views and directly search using the built-in Kodi search"
+msgstr ""
+
+msgctxt "#31590"
+msgid "Hide the system bar containing the time, date, library statistcs, etc. Will also hide the RSS feed if enabled in Kodi settings"
+msgstr ""
+
+msgctxt "#31591"
+msgid "Choose a music genre path for custom icons or choose a resource pack"
+msgstr ""
+
+msgctxt "#31592"
+msgid "Favourites dialog"
+msgstr ""
+
+msgctxt "#31593"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR]Customize the main menu · Choose skin colors[CR]Set up widgets · Enable optional features"
+msgstr ""
+
+msgctxt "#31594"
+msgid "[B]OPEN FILE MANAGER[/B][CR]Access files from within Kodi[CR]Add source · Perform file operations"
+msgstr ""
+
+msgctxt "#31595"
+msgid "[B]OPEN THE EVENT LOG[/B][CR]Library update reports · Failed scrapes · Missing files[CR]PVR events · Add-on events"
+msgstr ""
+
+msgctxt "#31596"
+msgid "Hide budget & revenue details"
+msgstr ""
+
+msgctxt "#31597"
+msgid "audience"
+msgstr ""
+
+msgctxt "#31598"
+msgid "Panel border"
+msgstr "Ohraničenie panelu"
+
+msgctxt "#31599"
+msgid "Age"
+msgstr ""
+
+msgctxt "#31600"
+msgid "Place of birth"
+msgstr ""
 
 msgctxt "#31601"
 msgid "Show discart in movie information"
@@ -2312,6 +2469,10 @@ msgctxt "#31613"
 msgid "Choose where the Trailer button should be placed"
 msgstr "Zvoľte, kde bude umiestnené tlačidlo Upútavka"
 
+msgctxt "#31614"
+msgid "Also known as"
+msgstr ""
+
 msgctxt "#31620"
 msgid "Floor"
 msgstr "Podklad"
@@ -2338,7 +2499,7 @@ msgstr "Zmena a úpravy položiek podponuky"
 
 msgctxt "#31684"
 msgid "Select the item image used for the Icons menu layout."
-msgstr "Voľba obrázku položky ponuky pre zobrazenie ponuky v režime 'Ikony'. "
+msgstr "Voľba obrázku položky ponuky pre zobrazenie ponuky v režime 'Ikony'."
 
 msgctxt "#31685"
 msgid "Choose a widget to display for this home menu item."
@@ -2514,11 +2675,11 @@ msgstr "Obal pre info dialog miniaplikácie"
 
 msgctxt "#31742"
 msgid "Cast on widget info dialog"
-msgstr "Cast on widget info dialog"
+msgstr ""
 
 msgctxt "#31743"
 msgid "Match info dialog background to widget background"
-msgstr "Match info dialog background to widget background"
+msgstr ""
 
 msgctxt "#31744"
 msgid "Global panel widget info"
@@ -2538,7 +2699,7 @@ msgstr "Obal Blu-Ray"
 
 msgctxt "#31748"
 msgid "This setting enables more widget customization. Disable to use Aeon Nox default widgets."
-msgstr "This setting enables more widget customization. Disable to use Aeon Nox default widgets."
+msgstr ""
 
 msgctxt "#31749"
 msgid "Change the transparency of the artwork and background."
@@ -2546,7 +2707,7 @@ msgstr "Zmena priehľadnosti grafiky a pozadia."
 
 msgctxt "#31750"
 msgid "Enable to use the same background throughout the home screen. Disable to set each background individually in the home menu customizer."
-msgstr "Enable to use the same background throughout the home screen. Disable to set each background individually in the home menu customizer."
+msgstr ""
 
 msgctxt "#31751"
 msgid "Choose the background style."
@@ -2554,35 +2715,35 @@ msgstr "Voľba štýlu pozadia."
 
 msgctxt "#31752"
 msgid "The list style widgets will automatically scroll if enabled."
-msgstr "The list style widgets will automatically scroll if enabled."
+msgstr ""
 
 msgctxt "#31753"
 msgid "Choose how information is displayed next to the list style widget."
-msgstr "Choose how information is displayed next to the list style widget."
+msgstr ""
 
 msgctxt "#31754"
 msgid "Choose a case for the widget information poster. Match will use the same case as the widget."
-msgstr "Choose a case for the widget information poster. Match will use the same case as the widget."
+msgstr ""
 
 msgctxt "#31755"
 msgid "Choose a case for the information dialog poster. Match will use the same case as the widget."
-msgstr "Choose a case for the information dialog poster. Match will use the same case as the widget."
+msgstr ""
 
 msgctxt "#31756"
 msgid "Show movie and tv show cast details within the information dialog."
-msgstr "Show movie and tv show cast details within the information dialog."
+msgstr ""
 
 msgctxt "#31757"
 msgid "Enable to use the widget background in the information dialog."
-msgstr "Enable to use the widget background in the information dialog."
+msgstr ""
 
 msgctxt "#31758"
 msgid "Enable to show widget information for all panel widgets. Disable to individually select in the home menu customizer."
-msgstr "Enable to show widget information for all panel widgets. Disable to individually select in the home menu customizer."
+msgstr ""
 
 msgctxt "#31759"
 msgid "If enabled widgets will not be visible throughout the home screen until they are focused."
-msgstr "If enabled widgets will not be visible throughout the home screen until they are focused."
+msgstr ""
 
 msgctxt "#31760"
 msgid "Configure custom Widget 1"
@@ -2598,11 +2759,11 @@ msgstr "Video doplnky"
 
 msgctxt "#31801"
 msgid "Audio addons"
-msgstr "Zvukové doplnky"
+msgstr "Audio doplnky"
 
 msgctxt "#31802"
 msgid "Video addons / Audio addons"
-msgstr "Video doplnky / Zvukové doplnky"
+msgstr "Video doplnky / Audio doplnky"
 
 msgctxt "#31803"
 msgid "Program addons"
@@ -2622,7 +2783,7 @@ msgstr "Tržby"
 
 msgctxt "#31852"
 msgid "Displays a larger ratings classification image with standard descriptions.[CR]Works with U.S. MPAA ratings only."
-msgstr "Displays a larger ratings classification image with standard descriptions.[CR]Works with U.S. MPAA ratings only."
+msgstr ""
 
 msgctxt "#31853"
 msgid "Choose where to display the CinemaVision button. The Default is to hide the Trailer button. Other options are replace the Play button or place it in the + (Extras) section."
@@ -2630,15 +2791,15 @@ msgstr "Zvoľte, kde bude zobrazené tlačidlo CinemaVision. Predvolené je ved�
 
 msgctxt "#31854"
 msgid "Use this setting to override the location of the Trailers button when using the Default setting for the CinemaVision button."
-msgstr "Use this setting to override the location of the Trailers button when using the Default setting for the CinemaVision button."
+msgstr ""
 
 msgctxt "#31855"
 msgid "Enable this setting to replace the Default info with online info provided by the ExtendedInfo script. You can use the Aeon Nox SiLVO version or the Defaults provided by the script if you enable the option in the settings for ExtendedInfo."
-msgstr "Enable this setting to replace the Default info with online info provided by the ExtendedInfo script. You can use the Aeon Nox SiLVO version or the Defaults provided by the script if you enable the option in the settings for ExtendedInfo."
+msgstr ""
 
 msgctxt "#31856"
 msgid "Use this to select the multi-fanart cycle speed skin wide."
-msgstr "Nastavenie cyklu striedania fanartov pre zobrazenia ktoré majú nastavené viac fanartov. "
+msgstr "Nastavenie cyklu striedania fanartov pre zobrazenia ktoré majú nastavené viac fanartov."
 
 msgctxt "#31900"
 msgid "My rating"
@@ -2678,7 +2839,7 @@ msgstr "Nastavenie vzhľadu hlavnej ponuky"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds, and statistics. Add your own custom main menu items."
-msgstr "Úprava a prispôsobenie hlavnej ponuky s miniaplikáciami, pozadiami, podponukami  a štatistikami. Pridajte si svoje vlastné položky do hlavnej ponuky."
+msgstr "Úprava a prispôsobenie hlavnej ponuky s miniaplikáciami, pozadiami, podponukami a štatistikami. Pridajte si svoje vlastné položky do hlavnej ponuky."
 
 msgctxt "#31913"
 msgid "Aeon Nox main menu horizontal position"
@@ -2714,7 +2875,7 @@ msgstr "Pri prehrávaní hudby zobrazí na domácej obrazovke miniaplikáciu s i
 
 msgctxt "#31921"
 msgid "Displays a widget on the Home screen with media information when a movie or episode is playing."
-msgstr "Pri prehrávaní filmu resp. epizódy seriálu zobrazí na domácej obrazovke  miniaplikácia s informáciami o prehrávanom videu."
+msgstr "Pri prehrávaní filmu resp. epizódy seriálu zobrazí na domácej obrazovke miniaplikácia s informáciami o prehrávanom videu."
 
 msgctxt "#31922"
 msgid "This enables custom genre backgrounds when browsing through the videolibrary's genre node. Filenames should match the genre label. Extension must be .jpg."
@@ -2746,7 +2907,7 @@ msgstr "Toto nastavenie definuje rozloženie hlavnej ponuky. Môžete zvoliť 5 
 
 msgctxt "#31930"
 msgid "Choose a widget to display on the Home screen to have easy access to content from the library."
-msgstr "Choose a widget to display on the Home screen to have easy access to content from the library."
+msgstr ""
 
 msgctxt "#31931"
 msgid "Video plot preference"
@@ -2754,23 +2915,23 @@ msgstr "Typ zobrazenej zápletky filmu"
 
 msgctxt "#31932"
 msgid "Show plot outline in the library views and full plot in the video information dialog or vice versa. Falls back to full plot if no outline is available."
-msgstr "Show plot outline in the library views and full plot in the video information dialog or vice versa. Falls back to full plot if no outline is available."
+msgstr ""
 
 msgctxt "#31933"
 msgid "Select an item to display on the left top of the main menu"
-msgstr "Select an item to display on the left top of the main menu"
+msgstr ""
 
 msgctxt "#31935"
 msgid "Switch places with another menu item. Opens a dialog with a list of menu items to choose from."
-msgstr "Switch places with another menu item. Opens a dialog with a list of menu items to choose from."
+msgstr ""
 
 msgctxt "#31937"
 msgid "Show the RSS feed on the bottom or top of the screen, depending on main menu position. Enabling this setting makes the submenu permanently visible."
 msgstr "Zobrazí RSS spravodajstvo na spodu alebo na vrchu obrazovky, v závislosti od pozície hlavnej ponuky. Povolenie tohoto nastavenia automaticky ponechá viditeľné podponuky."
 
 msgctxt "#31938"
-msgid "Enables extra information in the TV show library, like TV show status, next / latest episode, etc. Depends on TV Show Next Aired add-on."
-msgstr "Povolí zobrazovanie extra informácií v knižnici seriálov, ako napr. stav, nasledujúca/posledná epizóda, a pod. Závisí od doplnku TV Show - Next Aired."
+msgid "Enables extra information in the TV show library, like TV show status, next / latest episode, etc. Depends on TheMovieDb Helper add-on."
+msgstr ""
 
 msgctxt "#31939"
 msgid "Hide Infopanel on scrolling"
@@ -2786,7 +2947,7 @@ msgstr "Režim Kiosk"
 
 msgctxt "#31942"
 msgid "Disables the slide out menu (media menu) in the library as well as certain buttons in the media information dialogs."
-msgstr "Nastavenie zakáže v knižnici vysúvaciu ponuku (ponuku médií), ako aj niektoré tlačidlá v dialógoch s informáciami o médiách."
+msgstr "Zakáže vysúvaciu ponuku (ponuka médií) v knižnici, ako aj niektoré tlačidlá v dialógoch s informáciami o médiách."
 
 msgctxt "#31943"
 msgid "Watched status indicator"
@@ -2794,7 +2955,7 @@ msgstr "Indikátory stavu videnia"
 
 msgctxt "#31944"
 msgid "Choose which overlays to show on thumbs in icon based views. Note that the \"Resume\" flag takes precedent over any watched status. After activating an overlay you must also enable it in each views settings. "
-msgstr "Zvoľte, aké značky sa zobrazia na náhľadoch v zoznamoch založených na ikonách. Pamätajte, že značka \"Pokračovať\" prepíše všetky ostatné značky. Po aktivovaní tejto voľby nezabudnite aktivovať aj zobrazenie značiek v príslušných zoznamoch."
+msgstr "Zvoľte, aké značky sa zobrazia na náhľadoch v zoznamoch založených na ikonách. Pamätajte, že značka \"Pokračovať\" prepíše všetky ostatné značky. Po aktivovaní tejto voľby nezabudnite aktivovať aj zobrazenie značiek v príslušných zoznamoch. "
 
 msgctxt "#31945"
 msgid "This toggles the layout of the List view. Default is a 7 item layout with extended info, \"Slim List\" is a 14 item, more basic layout"
@@ -2810,7 +2971,7 @@ msgstr "OBRÁZKY"
 
 msgctxt "#31952"
 msgid "LIVE TV"
-msgstr "TELEVÍZIA"
+msgstr "ŽIVÉ VYSIELANIE"
 
 msgctxt "#31953"
 msgid "VIDEOS"
@@ -2906,15 +3067,15 @@ msgstr "Zmena spôsobu navigácie vo vodorovnej hlavnej ponuke. Pri predvolenom 
 
 msgctxt "#31981"
 msgid "Show Plot and Cast information when pressing info button during video playback."
-msgstr "Show Plot and Cast information when pressing info button during video playback."
+msgstr ""
 
 msgctxt "#31982"
 msgid "Display discart for  movies in information screen."
-msgstr "Display discart for  movies in information screen."
+msgstr ""
 
 msgctxt "#31983"
 msgid "Swap locations of Trailer and Cinema Experience buttons. Location is either in extras (+) or in the info dialog."
-msgstr "Swap locations of Trailer and Cinema Experience buttons. Location is either in extras (+) or in the info dialog."
+msgstr ""
 
 msgctxt "#31984"
 msgid "When activated the default mediaflags and icons are changed to colored versions"
@@ -2926,7 +3087,7 @@ msgstr "Nastavenie štýlu obalov, ktorý bude použitý vo všetkých zobrazeni
 
 msgctxt "#31987"
 msgid "Enable this setting to hide the \"Disable views\" button in the sidemenu."
-msgstr "Enable this setting to hide the \"Disable views\" button in the sidemenu."
+msgstr ""
 
 msgctxt "#31988"
 msgid "Enable setting to animate backgrounds for views and the homescreen"
@@ -2942,7 +3103,7 @@ msgstr "Umiestnenie tlačidla CinemaVision"
 
 msgctxt "#31991"
 msgid " Change default Widget to display a panel type style"
-msgstr " Change default Widget to display a panel type style"
+msgstr ""
 
 msgctxt "#31992"
 msgid "Change panel style layout. Choose between compact or expanded layouts."
@@ -2955,3 +3116,55 @@ msgstr "Falošná grafika disku"
 msgctxt "#31994"
 msgid "Vertical Menu"
 msgstr "Zvislá ponuka"
+
+#~ msgctxt "#31111"
+#~ msgid "Similar movies"
+#~ msgstr "Podobné filmy"
+
+#~ msgctxt "#31115"
+#~ msgid "Similar TV shows"
+#~ msgstr "Podobné seriály"
+
+#~ msgctxt "#31521"
+#~ msgid "More movies featuring"
+#~ msgstr ", v ďalších filmoch"
+
+#~ msgctxt "#31545"
+#~ msgid "More tv shows featuring"
+#~ msgstr ", v ďalších seriáloch"
+
+#~ msgctxt "#31415"
+#~ msgid "Set the Highlight Bar color used throughout the skin."
+#~ msgstr "Nastavenie farby zvýraznenia, ktorá bude použitá vo vačšine častí vzhľadu."
+
+#~ msgctxt "#31110"
+#~ msgid "Colorbox Script provides the blurred images for the Music and Video info dialogs as well as the fullscreen music blurred background."
+#~ msgstr "Skript poskytuje rozmazané obrázky pre dialógy s informáciami o hudbe a videách, ako aj pozadia pri prehrávaní hudby v režime celej obrazovky."
+
+#~ msgctxt "#31126"
+#~ msgid "Skin Helper Service adds extra information for the skin to display that is not normally available in Kodi."
+#~ msgstr "Skin Helper Service poskytuje vzhľadu na zobrazenie extra informácie, ktoré nie sú v Kodi bežne dostupné."
+
+#~ msgctxt "#31473"
+#~ msgid "Artwork Beef is an Artwork Downloader and manager used to add or remove standard and extended artwork to your library."
+#~ msgstr "Skript Artwork Beef je sťahovač artworkov (umeleckej grafiky) a manažér, umožňujúci pridávanie a odoberanie štandardných aj rozšírených artworkov do/z vašej knižnice."
+
+#~ msgctxt "#31475"
+#~ msgid "Skin Helper Service Widgets adds more options available as Widgets for your menu items. "
+#~ msgstr "Skin Helper Service Widgets poskytuje množstvo možností dostupných ako miniaplikácie pre vaše položky hlavnej ponuky. "
+
+#~ msgctxt "#31480"
+#~ msgid "Library Editor Script uses JSON to directly edit your database information."
+#~ msgstr "Skript Library Editor využíva JSON pre priamu editáciu databázových informácií."
+
+#~ msgctxt "#31938"
+#~ msgid "Enables extra information in the TV show library, like TV show status, next / latest episode, etc. Depends on TV Show Next Aired add-on."
+#~ msgstr "Povolí zobrazovanie extra informácií v knižnici seriálov, ako napr. stav, nasledujúca/posledná epizóda, a pod. Závisí od doplnku TV Show - Next Aired."
+
+#~ msgctxt "#31332"
+#~ msgid "Not Installed"
+#~ msgstr "Nenainštalovaný"
+
+#~ msgctxt "#31451"
+#~ msgid "  •  Click to Install"
+#~ msgstr "  •  Kliknutím nainštalovať"

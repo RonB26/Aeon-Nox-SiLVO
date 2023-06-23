@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<visible>String.IsEmpty(Window(Home).Property(Enable.ScreenshotMode)) + !Window.IsActive(visualisation) + !Player.HasGame + !Player.FrameAdvance + !Window.IsActive(pvrosdchannels) + ![Player.Paused + Window.IsActive(1134) + !Skin.HasSetting(Disable.Netflix.Pause)]</visible>
-	<visible>VideoPlayer.IsFullscreen + [Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] | [Window.IsActive(fullscreenvideo) + !String.IsEmpty(PVR.ChannelNumberInput)]</visible>
+	<visible>VideoPlayer.IsFullscreen + [Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Player.ShowInfo | Player.Seeking | Player.HasPerformedSeek(3) | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] | [Window.IsActive(fullscreenvideo) + !String.IsEmpty(PVR.ChannelNumberInput)]</visible>
 	<zorder>1</zorder>
 	<controls>
 		<control type="label">
@@ -15,7 +15,7 @@
 			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
 		</control>
 		<control type="group">
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<visible>!VideoPlayer.Content(LiveTV) + ![Player.Paused + Skin.HasSetting(CleanPauseScreen) + !Window.IsActive(fullscreeninfo)]</visible>
 			<control type="group">
 				<top>1014</top>
 				<visible>!Window.IsVisible(SliderDialog)</visible>
@@ -128,6 +128,7 @@
 				</control>
 			</control>
 			<control type="group">
+				<top>447</top>
 				<animation type="WindowOpen" reversible="false" condition="!Player.Paused">
 					<effect type="fade" start="0" end="100" time="479.52" />
 				</animation>
@@ -137,26 +138,22 @@
 				<animation type="VisibleChange" reversible="false">
 					<effect type="fade" start="0" end="100" time="479.52" />
 				</animation>
-				<visible>Player.Paused</visible>
+				<visible>Player.Paused + !System.HasVisibleModalDialog</visible>
 				<control type="group">
 					<left>867</left>
-					<top>378</top>
+					<width>186</width>
+					<height>186</height>
 					<visible>!Skin.HasSetting(PausedLabel)</visible>
 					<control type="image">
-						<width>186</width>
-						<height>186</height>
 						<texture>osd/bg_play_large.png</texture>
 					</control>
 					<control type="image">
-						<width>186</width>
-						<height>186</height>
 						<texture>osd/btn_pause.png</texture>
 					</control>
 				</control>
 				<control type="label">
-					<top>367</top>
 					<width>100%</width>
-					<height>200</height>
+					<height>184</height>
 					<align>center</align>
 					<label>[UPPERCASE][B]$LOCALIZE[112][/B][/UPPERCASE]</label>
 					<font>BigAssTimeFont</font>

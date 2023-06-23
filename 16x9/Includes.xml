@@ -4,6 +4,8 @@
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_Backgrounds.xml" />
 	<include file="Includes_CommonValues.xml" />
+	<include file="Includes_DialogInfo.xml" />
+	<include file="Includes_Games.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_LiveBG.xml" />
 	<include file="Includes_Lyrics.xml" />
@@ -41,6 +43,198 @@
 	<include file="View_602_FanartList.xml" />
 	<include file="View_603_Music_JukeBox.xml" />
 	<include file="View_609_Fullscreen_Wall.xml" />
+	<!-- RATINGS -->
+	<!-- TMDb Helper -->
+	<!-- ROTTENTOMATOES IMDb TMDb -->
+	<include name="TMDbHelperFlags">
+		<control type="grouplist">
+			<visible>!String.IsEmpty(Container(9143).ListItem.Property(RottenTomatoes_Rating))</visible>
+			<width>170</width>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>60</width>
+				<include>MediaFlagValues</include>
+				<texture>$INFO[Container(9143).ListItem.Property(RottenTomatoes_Image),logos/rottentomatoes/,.png]</texture>
+			</control>
+			<control type="grouplist">
+				<width>110</width>
+				<height>78</height>
+				<align>center</align>
+				<control type="label">
+					<height>26</height>
+					<font>font13_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(9143).ListItem.Property(RottenTomatoes_Rating),,%]</label>
+				</control>
+				<control type="label">
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<label>$LOCALIZE[31475]</label>
+				</control>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>!String.IsEmpty(Container(9143).ListItem.Property(RottenTomatoes_UserMeter))</visible>
+			<width>170</width>
+			<orientation>horizontal</orientation>
+			<itemgap>6</itemgap>
+			<control type="image">
+				<width>60</width>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[RottenFreshAudienceTMDbHelperLogoVar]</texture>
+			</control>
+			<control type="grouplist">
+				<width>110</width>
+				<height>78</height>
+				<align>center</align>
+				<control type="label">
+					<height>26</height>
+					<font>font13_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(9143).ListItem.Property(RottenTomatoes_UserMeter),,%]</label>
+				</control>
+				<control type="label">
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<label>$LOCALIZE[31597]</label>
+				</control>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>!String.IsEmpty(Container(9143).ListItem.Property(IMDb_Rating))</visible>
+			<width>170</width>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="image">
+				<width>60</width>
+				<include>MediaFlagValues</include>
+				<texture>logos/imdb.png</texture>
+			</control>
+			<control type="grouplist">
+				<left>10</left>
+				<width>100</width>
+				<height>78</height>
+				<align>center</align>
+				<control type="label">
+					<height>60</height>
+					<font>font13_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(9143).ListItem.Property(IMDb_Rating)]</label>
+				</control>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>!String.IsEmpty(Container(9143).ListItem.Property(TMDb_Rating))</visible>
+			<width>170</width>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="image">
+				<width>60</width>
+				<include>MediaFlagValues</include>
+				<texture>logos/tmdb.png</texture>
+			</control>
+			<control type="grouplist">
+				<left>10</left>
+				<width>100</width>
+				<height>78</height>
+				<align>center</align>
+				<control type="label">
+					<height>60</height>
+					<font>font13_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Container(9143).ListItem.Property(TMDb_Rating)]</label>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- Embuary Helper -->
+	<!-- ROTTENTOMATOES/METACRITIC -->
+	<include name="RottenMetaFlags">
+		<control type="grouplist">
+			<visible>!String.IsEmpty(Container(9142).ListItem.Rating(tomatometerallcritics))</visible>
+			<width>170</width>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>60</width>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[RottenFreshLogoVar]</texture>
+			</control>
+			<control type="grouplist">
+				<width>110</width>
+				<height>78</height>
+				<align>center</align>
+				<control type="label">
+					<height>26</height>
+					<font>font13_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$VAR[RottenFreshLabelVar]$VAR[RottenFreshLabel2Var]</label>
+				</control>
+				<control type="label">
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<label>$LOCALIZE[31475]</label>
+				</control>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>!String.IsEmpty(Container(9142).ListItem.Rating(tomatometerallaudience))</visible>
+			<width>170</width>
+			<orientation>horizontal</orientation>
+			<itemgap>6</itemgap>
+			<control type="image">
+				<width>60</width>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[RottenFreshAudienceLogoVar]</texture>
+			</control>
+			<control type="grouplist">
+				<width>110</width>
+				<height>78</height>
+				<align>center</align>
+				<control type="label">
+					<height>26</height>
+					<font>font13_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$VAR[RottenFreshAudienceLabelVar]$VAR[RottenFreshAudienceLabel2Var]</label>
+				</control>
+				<control type="label">
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<label>$LOCALIZE[31597]</label>
+				</control>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>!String.IsEmpty(Container(9142).ListItem.Rating(metacritic))</visible>
+			<width>170</width>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>60</width>
+				<include>MediaFlagValues</include>
+				<texture>logos/metacritic.png</texture>
+			</control>
+			<control type="grouplist">
+				<width>110</width>
+				<height>78</height>
+				<align>center</align>
+				<control type="label">
+					<height>26</height>
+					<font>font13_bold</font>
+					<textcolor>grey</textcolor>
+					<label>$VAR[MetacriticLabelVar]$VAR[MetacriticLabel2Var]</label>
+				</control>
+				<control type="label">
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey</textcolor>
+					<label>metacritic</label>
+				</control>
+			</control>
+		</control>
+	</include>
 	<!-- Media Menu -->
 	<include name="SideBladeLeft">
 		<animation effect="slide" start="440,0" end="0,0" time="400" tween="quadratic" easing="out" condition="String.IsEmpty(Window(Home).Property(MediaMenu))">Conditional</animation>
@@ -48,7 +242,7 @@
 		<control type="image">
 			<width>432</width>
 			<height>1080</height>
-			<texture colordiffuse="E6FFFFFF" border="40">mediamenu_back.png</texture>
+			<texture border="40">mediamenu_back.png</texture>
 		</control>
 		<control type="button" id="9051">
 			<include>HiddenObject</include>
@@ -73,7 +267,7 @@
 			<visible>system.getbool(input.enablemouse) + !Window.IsVisible(1128) + !Window.IsVisible(1130) + !Window.IsVisible(1131) + !Window.IsVisible(1132)</visible>
 		</control>
 		<control type="image">
-			<top>-15</top>
+			<top>-20</top>
 			<width>400</width>
 			<height>130</height>
 			<texture>aeon-nox-logo.png</texture>
@@ -115,7 +309,7 @@
 			<include>ButtonCommonValues</include>
 			<label>$INFO[Container.Viewmode,$LOCALIZE[31100] ]</label>
 			<onclick>ActivateWindow(1130)</onclick>
-			<visible>!Window.IsActive(tvchannels) + !Window.IsActive(eventlog)</visible>
+			<visible>!Window.IsActive(tvchannels)</visible>
 		</control>
 		<control type="button" id="7031">
 			<description>View settings</description>
@@ -166,6 +360,7 @@
 			<include>ButtonCommonValues</include>
 			<label>$LOCALIZE[33068]</label>
 			<onclick>ActivateWindow(1128)</onclick>
+			<visible>!Window.IsActive(FavouritesBrowser)</visible>
 		</control>
 	</include>
 	<include name="PVRMediaMenu">
@@ -282,6 +477,12 @@
 					<label>31051</label>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="radiobutton" id="31">
+					<include>ButtonCommonValues</include>
+					<label>$LOCALIZE[587]</label>
+					<selected>Container.Filtered</selected>
+					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="button" id="2001">
 					<include>ButtonCommonValues</include>
@@ -666,11 +867,11 @@
 					</control>
 					<control type="label">
 						<width>30</width>
-						<height>40</height>
-						<font>IconTiny</font>
+						<height>43</height>
+						<font>IconTinyMD</font>
 						<textcolor>grey</textcolor>
 						<shadowcolor>shadow</shadowcolor>
-						<label></label>
+						<label></label>
 					</control>
 					<control type="label">
 						<width>auto</width>
@@ -679,15 +880,15 @@
 						<textcolor>grey</textcolor>
 						<shadowcolor>shadow</shadowcolor>
 						<aligny>top</aligny>
-						<label>$INFO[Container.CurrentPage,[COLOR grey2] | ]$INFO[Container.NumPages,/,[/COLOR]]</label>
+						<label>$INFO[Container.CurrentPage,[COLOR grey2] • ]$INFO[Container.NumPages,/,[/COLOR]]</label>
 					</control>
 					<control type="label">
 						<width>30</width>
-						<height>40</height>
-						<font>IconTiny</font>
+						<height>42</height>
+						<font>IconTinyMD</font>
 						<textcolor>grey2</textcolor>
 						<shadowcolor>shadow</shadowcolor>
-						<label></label>
+						<label></label>
 					</control>
 				</control>
 				<control type="label">
@@ -731,18 +932,21 @@
 	<!-- System Windows -->
 	<include name="SystemPanel">
 		<control type="image">
-			<left>51</left>
-			<width>1818</width>
-			<height>875</height>
-			<texture border="40" colordiffuse="CC000000">homewidgets/bg_flat.png</texture>
+			<top>31</top>
+			<left>79</left>
+			<width>1760</width>
+			<height>812</height>
+			<texture>colors/black90.png</texture>
+			<bordersize>1</bordersize>
+			<bordertexture border="1" infill="false" colordiffuse="$VAR[ThemeBorderColor]">colors/border_frame.png</bordertexture>
 		</control>
 		<control type="image">
 			<left>436</left>
 			<top>32</top>
 			<width>1</width>
 			<height>810</height>
-			<texture colordiffuse="$VAR[ThemeLabelColor]">separator_vertical.png</texture>
-			<animation effect="slide" end="90" condition="Window.IsActive(profiles)">Conditional</animation>
+			<texture colordiffuse="grey4">separator_vertical.png</texture>
+			<animation effect="slide" end="91" condition="Window.IsActive(profiles)">Conditional</animation>
 			<animation effect="slide" end="275" condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEmpty(Window(Home).Property(skinshortcuts-management-widget))">Conditional</animation>
 		</control>
 	</include>
@@ -835,28 +1039,27 @@
 	<include name="ExtendedInfoMovieLists">
 		<control type="panel" id="90011">
 			<visible allowhiddenfocus="true">Integer.IsGreater(Container(90011).NumItems,0)</visible>
-			<onclick>noop</onclick>
+			<onclick>RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')</onclick>
 			<include content="ExtendedInfoListLayout">
 				<param name="PanelID">90011</param>
 				<param name="content">plugin://script.embuary.helper/?info=getsimilar&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</param>
-				<param name="limit">12</param>
 			</include>
 		</control>
 		<control type="panel" id="90012">
 			<visible allowhiddenfocus="true">Integer.IsGreater(Container(90012).NumItems,0)</visible>
-			<onclick>noop</onclick>
+			<onclick>RunScript(script.embuary.helper,action=playitem,item='$ESCINFO[ListItem.Filenameandpath]')</onclick>
 			<include content="ExtendedInfoListLayout">
 				<param name="PanelID">90012</param>
 				<param name="content">plugin://script.embuary.helper/?info=getdirectedby&amp;dbid=$INFO[ListItem.DBID]</param>
 			</include>
 		</control>
-		<!-- <control type="panel" id="90013">
+		<control type="panel" id="90013">
 			<visible allowhiddenfocus="true">Integer.IsGreater(Container(90013).NumItems,0)</visible>
 			<include content="ExtendedInfoListLayout">
 				<param name="PanelID">90013</param>
 				<param name="content">plugin://script.embuary.helper/?info=getitemsbyactor&amp;type=movie&amp;dbid=$INFO[ListItem.DBID]</param>
 			</include>
-		</control> -->
+		</control>
 	</include>
 	<include name="ExtendedInfoSeriesLists">
 		<control type="panel" id="90014">
@@ -867,13 +1070,43 @@
 				<param name="limit">12</param>
 			</include>
 		</control>
-		<!-- <control type="panel" id="90015">
+		<control type="panel" id="90015">
 			<visible allowhiddenfocus="true">Integer.IsGreater(Container(90015).NumItems,0)</visible>
 			<include content="ExtendedInfoListLayout">
 				<param name="PanelID">90015</param>
-				<param name="content">plugin://script.embuary.helper/?info=getitemsbyactor&amp;type=tvshow&amp;dbid=$INFO[ListItem.DBID]</param>
+				<param name="content">plugin://script.embuary.helper/?info=getitemsbyactor&amp;type=tvshow&amp;dbid=$INFO[ListItem.DBID]&amp;content=tvshow</param>
 			</include>
-		</control> -->
+		</control>
+	</include>
+	<include name="TMDbHelperPersonList">
+		<control type="panel" id="900010">
+			<visible allowhiddenfocus="true">Integer.IsGreater(Container(900010).NumItems,0)</visible>
+			<include content="ExtendedInfoListLayout">
+				<param name="PanelID">900010</param>
+				<param name="content">plugin://plugin.video.themoviedb.helper?info=stars_in_movies&amp;type=person&amp;query=$INFO[ListItem.Label]</param>
+			</include>
+		</control>
+		<control type="panel" id="900011">
+			<visible allowhiddenfocus="true">Integer.IsGreater(Container(900011).NumItems,0)</visible>
+			<include content="ExtendedInfoListLayout">
+				<param name="PanelID">900011</param>
+				<param name="content">plugin://plugin.video.themoviedb.helper?info=stars_in_tvshows&amp;type=person&amp;query=$INFO[ListItem.Label]</param>
+			</include>
+		</control>
+		<control type="panel" id="900012">
+			<visible allowhiddenfocus="true">Integer.IsGreater(Container(900012).NumItems,0)</visible>
+			<include content="ExtendedInfoListLayout">
+				<param name="PanelID">900012</param>
+				<param name="content">plugin://plugin.video.themoviedb.helper?info=crew_in_movies&amp;type=person&amp;query=$INFO[ListItem.Label]</param>
+			</include>
+		</control>
+		<control type="panel" id="900020">
+			<visible allowhiddenfocus="true">Integer.IsGreater(Container(900020).NumItems,0)</visible>
+			<include content="ExtendedInfoListLayout">
+				<param name="PanelID">900020</param>
+				<param name="content">plugin://plugin.video.themoviedb.helper?info=images&amp;type=person&amp;query=$INFO[ListItem.Label]</param>
+			</include>
+		</control>
 	</include>
 	<include name="CustomActorList">
 		<control type="panel" id="90050">
@@ -1331,8 +1564,8 @@
 				<onclick>Dialog.Close(all,true)</onclick>
 				<onclick>SetProperty(Enable.ScreenshotMode,True,Home)</onclick>
 				<onclick>Notification($LOCALIZE[19098]:,$LOCALIZE[31329],1500,icon.png)</onclick>
-				<onclick>AlarmClock(Take a Screenshot,TakeScreenshot,00:03,silent)</onclick>
-				<onclick>AlarmClock(Reset ScreenshotMode,ClearProperty(Enable.ScreenshotMode,Home),00:04,silent)</onclick>
+				<onclick>Skin.TimerStart(takescreenshot)</onclick>
+				<onclick>Skin.TimerStart(resetscreenshot)</onclick>
 				<oninfo>Dialog.Close(all,true)</oninfo>
 				<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
 			</control>
@@ -1920,7 +2153,7 @@
 			<control type="group" id="13000">
 				<control type="image">
 					<include>FullscreenDimensions</include>
-					<texture colordiffuse="80FFFFFF">black.png</texture>
+					<texture>colors/black50.png</texture>
 					<visible>!Skin.HasSetting(Enable.ManualInfoPanel) + [String.IsEqual(Control.GetLabel(4420),5) | String.IsEqual(Control.GetLabel(4420),6)] | [Skin.HasSetting(Enable.ManualInfoPanel) + Control.HasFocus(4401) + [String.IsEqual(Control.GetLabel(4420),5) | String.IsEqual(Control.GetLabel(4420),6)]]</visible>
 					<animation effect="fade" time="320">Visible</animation>
 					<animation effect="fade" time="720">Hidden</animation>
@@ -2055,7 +2288,7 @@
 		<definition>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-				<texture>black.png</texture>
+				<texture>colors/black.png</texture>
 				<animation effect="fade" start="0" end="40" time="320">Visible</animation>
 				<visible>[String.IsEqual(Skin.String(InfoPopup.Delay),2) + System.IdleTime(2) | String.IsEqual(Skin.String(InfoPopup.Delay),3) + System.IdleTime(3) | String.IsEqual(Skin.String(InfoPopup.Delay),4) + System.IdleTime(4) | String.IsEqual(Skin.String(InfoPopup.Delay),5) + System.IdleTime(5)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)]</visible>
 			</control>
@@ -2191,15 +2424,15 @@
 						<width>auto</width>
 						<font>font14</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
-						<label>$LOCALIZE[31010]: [COLOR grey]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Season),S]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Episode),E]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Name), - ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired), (,)][/COLOR]</label>
-						<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Name))]</visible>
+						<label>$LOCALIZE[31010]: [COLOR grey]$INFO[Container(9143).ListItem.Property(Next_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Next_Aired.Episode),E]$INFO[Container(9143).ListItem.Property(Next_Aired.Name), - ]$INFO[Container(9143).ListItem.Property(Next_Aired), (,)][/COLOR]</label>
+						<visible>[!String.IsEmpty(Container(9143).ListItem.Property(Next_Aired)) | !String.IsEmpty(Container(9143).ListItem.Property(Next_Aired.Name))]</visible>
 					</control>
 					<control type="label">
 						<width>auto</width>
 						<font>font14</font>
 						<textcolor>$VAR[ThemeLabelColor]</textcolor>
-						<label>$LOCALIZE[31011]: [COLOR grey]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Season),S]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Episode),E]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Name), - ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired), (,)][/COLOR]</label>
-						<visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired)) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Name))</visible>
+						<label>$LOCALIZE[31011]: [COLOR grey]$INFO[Container(9143).ListItem.Property(Last_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Last_Aired.Episode),E]$INFO[Container(9143).ListItem.Property(Last_Aired.Name), - ]$INFO[Container(9143).ListItem.Property(Last_Aired), (,)][/COLOR]</label>
+						<visible>!String.IsEmpty(Container(9143).ListItem.Property(Last_Aired)) + String.IsEmpty(Container(9143).ListItem.Property(Next_Aired)) + String.IsEmpty(Container(9143).ListItem.Property(Next_Aired.Name))</visible>
 					</control>
 				</control>
 				<control type="textbox">
@@ -2755,6 +2988,11 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>IconTinyMD</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
 			<name>IconSmall</name>
 			<filename>webhostinghub-glyphs.ttf</filename>
 			<size>30</size>
@@ -2792,7 +3030,7 @@
 			<ondown condition="Control.IsVisible(615) + Integer.IsGreaterOrEqual(Container(52).NumPages,5)">616</ondown>
 			<ondown condition="!Integer.IsGreaterOrEqual(Container(52).NumPages,5) | Integer.IsGreaterOrEqual(Container(52).NumPages,5) + !Control.IsVisible(614) + !Control.IsVisible(615)">4400</ondown>
 			<texturesliderbackground />
-			<texturesliderbar colordiffuse="40FFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
@@ -2809,7 +3047,7 @@
 			<ondown condition="Control.IsVisible(615) + Integer.IsGreaterOrEqual(Container(53).NumPages,5)">616</ondown>
 			<ondown condition="!Integer.IsGreaterOrEqual(Container(53).NumPages,5) | Integer.IsGreaterOrEqual(Container(53).NumPages,5) + !Control.IsVisible(614) + !Control.IsVisible(615)">4400</ondown>
 			<texturesliderbackground />
-			<texturesliderbar colordiffuse="40FFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
@@ -2826,7 +3064,7 @@
 			<ondown condition="Control.IsVisible(615) + Integer.IsGreaterOrEqual(Container(54).NumPages,5)">616</ondown>
 			<ondown condition="!Integer.IsGreaterOrEqual(Container(54).NumPages,5) | Integer.IsGreaterOrEqual(Container(54).NumPages,5) + !Control.IsVisible(614) + !Control.IsVisible(615)">4400</ondown>
 			<texturesliderbackground />
-			<texturesliderbar colordiffuse="40FFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
@@ -2842,7 +3080,7 @@
 			<ondown condition="Control.IsVisible(615) + Integer.IsGreaterOrEqual(Container(56).NumPages,5)">616</ondown>
 			<ondown condition="!Integer.IsGreaterOrEqual(Container(56).NumPages,5) | Integer.IsGreaterOrEqual(Container(56).NumPages,5) + !Control.IsVisible(614) + !Control.IsVisible(615)">4400</ondown>
 			<texturesliderbackground />
-			<texturesliderbar colordiffuse="40FFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
@@ -2858,7 +3096,7 @@
 			<ondown condition="Control.IsVisible(615) + Integer.IsGreaterOrEqual(Container(57).NumPages,5)">616</ondown>
 			<ondown condition="!Integer.IsGreaterOrEqual(Container(57).NumPages,5) | Integer.IsGreaterOrEqual(Container(57).NumPages,5) + !Control.IsVisible(614) + !Control.IsVisible(615)">4400</ondown>
 			<texturesliderbackground />
-			<texturesliderbar colordiffuse="40FFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
@@ -2874,7 +3112,7 @@
 			<ondown condition="Control.IsVisible(615) + Integer.IsGreaterOrEqual(Container(59).NumPages,5)">616</ondown>
 			<ondown condition="!Integer.IsGreaterOrEqual(Container(59).NumPages,5) | Integer.IsGreaterOrEqual(Container(59).NumPages,5) + !Control.IsVisible(614) + !Control.IsVisible(615)">4400</ondown>
 			<texturesliderbackground />
-			<texturesliderbar colordiffuse="40FFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
@@ -2891,7 +3129,7 @@
 			<ondown condition="Control.IsVisible(615) + Integer.IsGreaterOrEqual(Container(509).NumPages,5)">616</ondown>
 			<ondown condition="!Integer.IsGreaterOrEqual(Container(509).NumPages,5) | Integer.IsGreaterOrEqual(Container(509).NumPages,5) + !Control.IsVisible(614) + !Control.IsVisible(615)">4400</ondown>
 			<texturesliderbackground />
-			<texturesliderbar colordiffuse="40FFFFFF">colors/white.png</texturesliderbar>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
@@ -2926,15 +3164,15 @@
 				<animation effect="fade" end="100" time="239.76">Visible</animation>
 				<control type="group">
 					<visible>!String.IsEmpty(VideoPlayer.Studio)</visible>
-					<width>270</width>
+					<width>240</width>
 					<control type="image" id="142099">
-						<width>270</width>
+						<width>240</width>
 						<include>MediaFlagValues</include>
 						<bordersize>2</bordersize>
 						<texture>$VAR[PathFlagsStudios]$INFO[VideoPlayer.Studio,,.png]</texture>
 					</control>
 					<control type="label">
-						<width>270</width>
+						<width>240</width>
 						<height>90</height>
 						<align>center</align>
 						<label>$INFO[VideoPlayer.Studio]</label>
@@ -2946,49 +3184,40 @@
 					</control>
 				</control>
 				<control type="image">
-					<width>270</width>
+					<width>240</width>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/mpaa/$VAR[VideoRatingFlagVar]</texture>
 					<visible>!String.IsEmpty(VideoPlayer.MPAA)</visible>
 				</control>
-				<control type="grouplist">
-					<width>270</width>
-					<height>100</height>
-					<orientation>horizontal</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<itemgap>-20</itemgap>
-					<control type="image">
-						<include>MediaFlagValues</include>
-						<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
-					</control>
-					<control type="image">
-						<top>-12</top>
-						<width>35</width>
-						<include>MediaFlagValues</include>
-						<texture>$VAR[MediaFlagsPathVar]/hdr.png</texture>
-						<visible>String.Contains(Player.Filename,hdr)</visible>
-						<animation effect="slide" end="10,-2" condition="!Skin.HasSetting(coloredflags)">Conditional</animation>
-						<animation effect="slide" end="0,-3" condition="Skin.HasSetting(coloredflags)">Conditional</animation>
-					</control>
+				<control type="image">
+					<width>240</width>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
 				</control>
 				<control type="image">
-					<width>270</width>
+					<width>240</width>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[MediaFlagsPathVar]/$INFO[VideoPlayer.HdrType,hdr/,.png]</texture>
+					<visible>!String.IsEmpty(VideoPlayer.HdrType)</visible>
+				</control>
+				<control type="image">
+					<width>240</width>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[VideoSourceFlagVar]</texture>
 				</control>
 				<control type="image">
-					<width>270</width>
+					<width>240</width>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
 				</control>
 				<control type="image">
-					<width>270</width>
+					<width>240</width>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[PlayerAudioCodecFlagVar]</texture>
 					<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
 				</control>
 				<control type="image">
-					<width>270</width>
+					<width>240</width>
 					<include>MediaFlagValues</include>
 					<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[VideoPlayer.AudioChannels,,.png]</texture>
 					<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
@@ -3281,8 +3510,8 @@
 							<font>font15</font>
 							<textcolor>$VAR[ThemeLabelColor]</textcolor>
 							<scroll>true</scroll>
-							<label>$INFO[Container(9143).ListItem.Property(Budget),$LOCALIZE[31850]: [COLOR grey],[/COLOR]]$INFO[Container(9143).ListItem.Property(Revenue),[COLOR grey]  •  [/COLOR]$LOCALIZE[31851]: [COLOR grey],[/COLOR]]</label>
-							<visible>VideoPlayer.Content(movies) + [!String.IsEmpty(Container(9143).ListItem.Property(Budget)) | !String.IsEmpty(Container(9143).ListItem.Property(Revenue))]</visible>
+							<label>$INFO[Window(Home).Property(TMDbHelper.Player.Budget),$LOCALIZE[31850]: [COLOR grey],[/COLOR]]$INFO[Window(Home).Property(TMDbHelper.Player.Revenue),[COLOR grey]  •  [/COLOR]$LOCALIZE[31851]: [COLOR grey],[/COLOR]]</label>
+							<visible>VideoPlayer.Content(movies) + [!String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Budget)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.Player.Revenue))]</visible>
 						</control>
 						<control type="label">
 							<width>1420</width>
@@ -3601,6 +3830,13 @@
 			</control>
 		</control>
 	</include>
+	<include name="EmbuaryHelperLibraryContentList">
+		<control type="list" id="9142">
+			<include>HiddenList</include>
+			<content limit="1">plugin://script.embuary.helper/?info=getbydbid&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</content>
+			<visible>!ListItem.IsCollection + !Container.Content(tvshows) + !Container.Content(seasons)</visible>
+		</control>
+	</include>
 	<include name="EmbuaryHelperContentList">
 		<control type="list" id="9142">
 			<include>HiddenList</include>
@@ -3610,7 +3846,6 @@
 	<include name="TMDbHelperContentList">
 		<control type="list" id="9143">
 			<include>HiddenList</include>
-			<content>plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;imdb_id=$INFO[VideoPlayer.IMDBNumber]</content>
 		</control>
 	</include>
 	<include name="DefaultLetterJump">
@@ -3619,6 +3854,7 @@
 			<left>880</left>
 			<top>310</top>
 			<include>VisibleFadeAnimation</include>
+			<animation effect="slide" start="0" end="820,-270" time="1" condition="Control.IsVisible(50)">Conditional</animation>
 			<animation effect="slide" start="0" end="-608,-60" time="1" condition="Control.IsVisible(57)">Conditional</animation>
 			<animation effect="slide" start="0" end="0,200" time="1" condition="Control.IsVisible(59)">Conditional</animation>
 			<animation effect="slide" start="0" end="0,-200" time="1" condition="Control.IsVisible(505)">Conditional</animation>
@@ -3626,23 +3862,23 @@
 			<control type="button" id="614">
 				<description>Go to Letter</description>
 				<include>HiddenObject</include>
-				<onup condition="!Control.IsVisible(506)">SetFocus(50)</onup>
-				<ondown condition="!Control.IsVisible(506)">4400</ondown>
-				<onup condition="Control.IsVisible(506)">SetFocus(50)</onup>
-				<onup condition="Control.IsVisible(506)">Action(prevletter)</onup>
-				<onup condition="Control.IsVisible(506)">SetFocus(614)</onup>
-				<ondown condition="Control.IsVisible(506)">SetFocus(50)</ondown>
-				<ondown condition="Control.IsVisible(506)">Action(nextletter)</ondown>
-				<ondown condition="Control.IsVisible(506)">SetFocus(614)</ondown>
+				<onup condition="![Control.IsVisible(50) | Control.IsVisible(506)]">SetFocus(50)</onup>
+				<ondown condition="![Control.IsVisible(50) | Control.IsVisible(506)]">4400</ondown>
+				<onup condition="Control.IsVisible(50) | Control.IsVisible(506)">SetFocus(50)</onup>
+				<onup condition="Control.IsVisible(50) | Control.IsVisible(506)">Action(prevletter)</onup>
+				<onup condition="Control.IsVisible(50) | Control.IsVisible(506)">SetFocus(614)</onup>
+				<ondown condition="Control.IsVisible(50) | Control.IsVisible(506)">SetFocus(50)</ondown>
+				<ondown condition="Control.IsVisible(50) | Control.IsVisible(506)">Action(nextletter)</ondown>
+				<ondown condition="Control.IsVisible(50) | Control.IsVisible(506)">SetFocus(614)</ondown>
 				<onleft>SetFocus(50)</onleft>
-				<onleft condition="!Control.IsVisible(506)">Action(prevletter)</onleft>
-				<onleft condition="!Control.IsVisible(506)">SetFocus(614)</onleft>
-				<onright condition="!Control.IsVisible(506)">SetFocus(50)</onright>
-				<onright condition="!Control.IsVisible(506)">Action(nextletter)</onright>
-				<onright condition="!Control.IsVisible(506)">SetFocus(614)</onright>
-				<onright condition="Control.IsVisible(506)">4400</onright>
+				<onleft condition="![Control.IsVisible(50) | Control.IsVisible(506)]">Action(prevletter)</onleft>
+				<onleft condition="![Control.IsVisible(50) | Control.IsVisible(506)]">SetFocus(614)</onleft>
+				<onright condition="![Control.IsVisible(50) | Control.IsVisible(506)]">SetFocus(50)</onright>
+				<onright condition="![Control.IsVisible(50) | Control.IsVisible(506)]">Action(nextletter)</onright>
+				<onright condition="![Control.IsVisible(50) | Control.IsVisible(506)]">SetFocus(614)</onright>
+				<onright condition="Control.IsVisible(50) | Control.IsVisible(506)">4400</onright>
 				<onback>50</onback>
-				<visible>!System.HasAddon(script.embuary.helper)</visible>
+				<visible>!System.AddonIsEnabled(script.embuary.helper)</visible>
 				<visible>[[Container.HasNext | Container.HasPrevious] + String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
 			</control>
 			<control type="image">
@@ -3651,7 +3887,7 @@
 				<width>328</width>
 				<height>328</height>
 				<texture border="85">sortletter_back.png</texture>
-				<animation effect="rotate" end="90" center="auto" condition="Control.IsVisible(506)">Conditional</animation>
+				<animation effect="rotate" end="90" center="auto" condition="Control.IsVisible(50) | Control.IsVisible(506)">Conditional</animation>
 			</control>
 			<control type="label">
 				<top>12</top>
@@ -3681,7 +3917,7 @@
 				<onright condition="!Control.IsVisible(51) + !Control.IsVisible(499) + !Control.IsVisible(500) + !Control.IsVisible(609)">4400</onright>
 				<onright condition="Control.IsVisible(51) | Control.IsVisible(499) | Control.IsVisible(500) | Control.IsVisible(609)">SetFocus(50)</onright>
 				<onback>SetFocus(50)</onback>
-				<visible>System.HasAddon(script.embuary.helper)</visible>
+				<visible>System.AddonIsEnabled(script.embuary.helper)</visible>
 				<visible>[[Container.HasNext | Container.HasPrevious] + String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
 				<itemlayout height="37" width="60">
 					<control type="label">
@@ -3721,7 +3957,7 @@
 				<ondown>4400</ondown>
 				<onback>SetFocus(50)</onback>
 				<orientation>horizontal</orientation>
-				<visible>System.HasAddon(script.embuary.helper)</visible>
+				<visible>System.AddonIsEnabled(script.embuary.helper)</visible>
 				<visible>[[Container.HasNext | Container.HasPrevious] + String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
 				<itemlayout height="60" width="66">
 					<control type="label">

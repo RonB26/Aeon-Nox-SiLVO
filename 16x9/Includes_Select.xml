@@ -2,37 +2,42 @@
 <includes>
 	<!-- Built-in-Select -->
 	<include name="DefaultSelect">
-		<!-- <control type="image">
+		<control type="image">
 			<include>FullscreenDimensions</include>
-			<colordiffuse>99FFFFFF</colordiffuse>
-			<texture border="1">black.png</texture>
-			<animation effect="fade" time="220">WindowOpen</animation>
-			<animation effect="fade" time="100">WindowClose</animation>
-		</control> -->
+			<texture>colors/black50.png</texture>
+			<animation effect="fade" time="300">WindowOpen</animation>
+			<animation effect="fade" time="300">WindowClose</animation>
+		</control>
 		<control type="group">
 			<include>DialogOpenCloseAnimation</include>
 			<left>160</left>
 			<top>245</top>
-			<animation effect="slide" end="0,-35" condition="Control.IsVisible(6)">Conditional</animation>
 			<control type="image">
-				<width>1600</width>
-				<height>660</height>
-				<texture border="40">dialogs/default/bg.png</texture>
+				<left>32</left>
+				<top>20</top>
+				<width>1556</width>
+				<height>602</height>
+				<texture>colors/black90.png</texture>
+				<bordersize>1</bordersize>
+				<bordertexture border="1" infill="false" colordiffuse="$VAR[ThemeBorderColor]">colors/border_frame.png</bordertexture>
 				<visible>Control.IsVisible(6)</visible>
 			</control>
 			<control type="image">
-				<left>293</left>
-				<width>1030</width>
-				<height>660</height>
-				<texture border="40">dialogs/default/bg.png</texture>
+				<left>314</left>
+				<top>20</top>
+				<width>990</width>
+				<height>602</height>
+				<texture>colors/black90.png</texture>
+				<bordersize>1</bordersize>
+				<bordertexture border="1" infill="false" colordiffuse="$VAR[ThemeBorderColor]">colors/border_frame.png</bordertexture>
 				<visible>!Control.IsVisible(6)</visible>
 			</control>
 			<control type="group">
 				<visible>!Control.IsVisible(3)</visible>
-				<left>17</left>
+				<left>33</left>
 				<top>30</top>
 				<control type="label">
-					<left>30</left>
+					<left>20</left>
 					<width>1420</width>
 					<height>40</height>
 					<font>font16_title_bold</font>
@@ -42,9 +47,9 @@
 				</control>
 				<control type="image">
 					<top>50</top>
-					<width>1566</width>
+					<width>1554</width>
 					<height>1</height>
-					<texture colordiffuse="$VAR[ThemeLabelColor]">separator_horizontal.png</texture>
+					<texture colordiffuse="grey4">separator_horizontal.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -61,10 +66,11 @@
 					<scroll>true</scroll>
 				</control>
 				<control type="image">
+					<left>13</left>
 					<top>50</top>
-					<width>996</width>
+					<width>980</width>
 					<height>1</height>
-					<texture colordiffuse="$VAR[ThemeLabelColor]">separator_horizontal.png</texture>
+					<texture colordiffuse="grey4">separator_horizontal.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -94,13 +100,13 @@
 			<control type="group" id="9000">
 				<control type="list" id="3">
 					<left>480</left>
-					<top>88</top>
+					<top>81</top>
 					<width>980</width>
 					<height>540</height>
 					<onup>3</onup>
 					<ondown>3</ondown>
-					<onleft>60</onleft>
-					<onright>90000</onright>
+					<onleft>90000</onleft>
+					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
 					<animation effect="slide" start="0" end="-157" time="0" tween="quadratic" condition="!Control.IsVisible(6)">Conditional</animation>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
@@ -207,19 +213,19 @@
 				</control>
 				<control type="list" id="6">
 					<left>32</left>
-					<top>88</top>
+					<top>81</top>
 					<width>1030</width>
-					<height>550</height>
+					<height>540</height>
 					<onup>6</onup>
 					<ondown>6</ondown>
-					<onleft>60</onleft>
-					<onright>90000</onright>
+					<onleft>90000</onleft>
+					<onright>60</onright>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
-					<itemlayout height="55" width="1041">
+					<itemlayout height="60" width="1041">
 						<control type="label">
 							<width>1030</width>
-							<height>55</height>
+							<height>60</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey2</textcolor>
@@ -228,8 +234,8 @@
 						</control>
 						<control type="label">
 							<width>1030</width>
-							<height>55</height>
-							<font>font14</font>
+							<height>60</height>
+							<font>font13</font>
 							<textoffsetx>15</textoffsetx>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>shadow</shadowcolor>
@@ -237,18 +243,18 @@
 							<label>$VAR[DialogSelectLabel2Var]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="55" width="1041">
+					<focusedlayout height="60" width="1041">
 						<control type="image">
 							<left>1</left>
 							<width>1030</width>
-							<height>55</height>
+							<height>60</height>
 							<texture colordiffuse="$VAR[HighlightBarColor]" border="5">listselect_fo.png</texture>
 							<visible>Control.HasFocus(6)</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
 						<control type="label">
 							<width>1030</width>
-							<height>55</height>
+							<height>60</height>
 							<font>font14</font>
 							<textoffsetx>15</textoffsetx>
 							<shadowcolor>shadow</shadowcolor>
@@ -257,8 +263,8 @@
 						</control>
 						<control type="label">
 							<width>1030</width>
-							<height>55</height>
-							<font>font14</font>
+							<height>60</height>
+							<font>font13</font>
 							<textoffsetx>15</textoffsetx>
 							<align>right</align>
 							<shadowcolor>shadow</shadowcolor>
@@ -269,26 +275,26 @@
 				</control>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>16</left>
-				<top>88</top>
+				<left>1291</left>
+				<top>81</top>
 				<height>540</height>
-				<width>14</width>
-				<onleft condition="Control.IsVisible(8)">98</onleft>
-				<onleft condition="Control.IsVisible(5) + !Control.IsVisible(8)">95</onleft>
-				<onleft condition="!Control.IsVisible(5)">97</onleft>
-				<onright>9000</onright>
+				<width>12</width>
+				<onright condition="Control.IsVisible(8)">98</onright>
+				<onright condition="Control.IsVisible(5) + !Control.IsVisible(8)">95</onright>
+				<onright condition="!Control.IsVisible(5)">97</onright>
+				<onleft>9000</onleft>
 				<ondown>60</ondown>
 				<onup>60</onup>
 				<showonepage>false</showonepage>
-				<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
-				<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
+				<texturesliderbackground />
+				<texturesliderbar>colors/white10.png</texturesliderbar>
 				<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
-				<animation effect="slide" start="0" end="293" time="0" tween="quadratic" condition="!Control.IsVisible(6)">Conditional</animation>
+				<animation effect="slide" start="0" end="-229" time="0" tween="quadratic" condition="Control.IsVisible(6)">Conditional</animation>
 			</control>
 			<control type="grouplist" id="90000">
 				<animation effect="slide" start="0" end="-275" time="0" condition="!Control.IsVisible(6)">Conditional</animation>
-				<left>1415</left>
-				<top>2</top>
+				<left>1400</left>
+				<top>4</top>
 				<width>200</width>
 				<itemgap>-40</itemgap>
 				<align>right</align>
@@ -306,7 +312,7 @@
 					<label></label>
 					<onclick>SendClick(2000,8)</onclick>
 					<ondown>9000</ondown>
-					<visible>Control.IsVisible(8)</visible>
+					<visible>Control.IsVisible(8) + String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<control type="button" id="95">
 					<description>Manual button</description>
@@ -399,7 +405,7 @@
 							<top>175</top>
 							<width>400</width>
 							<height>50</height>
-							<texture colordiffuse="88FFFFFF">black.png</texture>
+							<texture>colors/black50.png</texture>
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Label2)</visible>
@@ -434,7 +440,7 @@
 						<control type="image">
 							<width>400</width>
 							<height>225</height>
-							<texture colordiffuse="44FFFFFF">black.png</texture>
+							<texture>colors/black25.png</texture>
 						</control>
 					</control>
 				</itemlayout>
@@ -453,7 +459,7 @@
 							<top>175</top>
 							<width>400</width>
 							<height>50</height>
-							<texture colordiffuse="88FFFFFF">black.png</texture>
+							<texture>colors/black50.png</texture>
 						</control>
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Label2)</visible>
@@ -485,7 +491,7 @@
 						<control type="image">
 							<width>400</width>
 							<height>225</height>
-							<texture colordiffuse="44FFFFFF">black.png</texture>
+							<texture>colors/black25.png</texture>
 							<include>FocusFadeOutAnimation</include>
 						</control>
 					</control>
@@ -539,6 +545,11 @@
 			<onclick>ActivateWindow(GameControllers)</onclick>
 		</item>
 		<item>
+			<description>Controller port config</description>
+			<label>$LOCALIZE[35110]</label>
+			<onclick>ActivateWindow(GamePorts)</onclick>
+		</item>
+		<item>
 			<description>Advanced settings</description>
 			<label>$LOCALIZE[35226]</label>
 			<onclick>ActivateWindow(GameAdvancedSettings)</onclick>
@@ -581,7 +592,8 @@
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>ClearProperty(ActorID,movieinformation)</onclick>
 			<onclick>ClearProperty(DirectorID,movieinformation)</onclick>
-			<onclick>RunScript(script.embuary.info,call=person,query='"$INFO[Window(movieinformation).Property(ActorName)]"')</onclick>
+			<onclick>RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Window(movieinformation).Property(ActorName)],type=person,call_auto=1111)</onclick>
+			<!-- <onclick>RunScript(script.embuary.info,call=person,query='"$INFO[Window(movieinformation).Property(ActorName)]"')</onclick> -->
 			<onclick>ClearProperty(ActorName,movieinformation)</onclick>
 		</item>
 	</include>
@@ -950,7 +962,12 @@
 		<item>
 			<label>$LOCALIZE[31023]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetImage(CustomDefaultBackground.path,special://skin/backgrounds)</onclick>
+			<onclick>Skin.SetImage(CustomDefaultBackground.path,special://skin/extras/backgrounds)</onclick>
+		</item>
+		<item>
+			<label>$LOCALIZE[31110]</label>
+			<onclick>Dialog.Close(1129)</onclick>
+			<onclick>Skin.SetImage(CustomDefaultBackground.path,special://skin/backgrounds/solidcolors)</onclick>
 		</item>
 		<item>
 			<label>$LOCALIZE[31022]</label>
@@ -978,13 +995,13 @@
 			<label>$LOCALIZE[31065]</label>
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>Skin.SetString(Viz.Background,2)</onclick>
-			<visible>System.HasAddon(script.grab.fanart)</visible>
+			<visible>System.AddonIsEnabled(script.grab.fanart)</visible>
 		</item>
 		<item>
 			<label>$LOCALIZE[31550]</label>
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>Skin.SetString(Viz.Background,8)</onclick>
-			<visible>!System.HasAddon(script.grab.fanart)</visible>
+			<visible>!System.AddonIsEnabled(script.grab.fanart)</visible>
 		</item>
 		<item>
 			<label fallback="31059">$INFO[System.AddonTitle(script.artistslideshow)]</label>
@@ -1001,7 +1018,7 @@
 			<label>$ADDON[script.skinshortcuts 32051]</label>
 			<onclick>Dialog.Close(1129)</onclick>
 			<onclick>Skin.SetString(Viz.Background,5)</onclick>
-			<onclick>Skin.SetImage(CustomMusicBackground.path,special://skin/backgrounds)</onclick>
+			<onclick>Skin.SetImage(CustomMusicBackground.path,special://skin/extras/backgrounds)</onclick>
 		</item>
 		<item>
 			<label>$ADDON[script.skinshortcuts 32052]</label>
@@ -1047,62 +1064,62 @@
 		<item>
 			<label>$LOCALIZE[13113]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.Reset(SkinInfo.AutoCloseVideoOSD)</onclick>
+			<onclick>Skin.Reset(AutoCloseVideoOSD)</onclick>
 		</item>
 		<item>
 			<label>5 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,5)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,5)</onclick>
 		</item>
 		<item>
 			<label>6 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,6)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,6)</onclick>
 		</item>
 		<item>
 			<label>7 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.Reset(SkinInfo.AutoCloseVideoOSD)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,7)</onclick>
 		</item>
 		<item>
 			<label>8 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,8)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,8)</onclick>
 		</item>
 		<item>
 			<label>9 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,9)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,9)</onclick>
 		</item>
 		<item>
 			<label>10 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,10)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,10)</onclick>
 		</item>
 		<item>
 			<label>15 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,15)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,15)</onclick>
 		</item>
 		<item>
 			<label>20 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,20)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,20)</onclick>
 		</item>
 		<item>
 			<label>30 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,30)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,30)</onclick>
 		</item>
 		<item>
 			<label>60 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,60)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,60)</onclick>
 		</item>
 		<item>
 			<label>90 $LOCALIZE[31090]</label>
 			<onclick>Dialog.Close(1129)</onclick>
-			<onclick>Skin.SetString(SkinInfo.AutoCloseVideoOSD,90)</onclick>
+			<onclick>Skin.SetString(AutoCloseVideoOSD,90)</onclick>
 		</item>
 	</include>
 	<!-- Custom Confirm -->
