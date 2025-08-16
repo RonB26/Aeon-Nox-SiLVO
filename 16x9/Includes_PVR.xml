@@ -66,7 +66,7 @@
 						<left>332</left>
 						<width>1520</width>
 						<height>2</height>
-						<texture colordiffuse="white">separator_horizontal.png</texture>
+						<texture colordiffuse="white">colors/white.png</texture>
 					</control>
 					<!-- Media Flags -->
 					<control type="grouplist">
@@ -194,7 +194,7 @@
 								<height>12</height>
 								<info>PVR.TimeshiftProgressEpgEnd</info>
 								<info2>PVR.TimeshiftProgressPlayPos</info2>
-								<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+								<texturebg border="3">colors/blank.png</texturebg>
 								<midtexture>colors/white50.png</midtexture>
 							</control>
 							<control type="slider" id="403">
@@ -219,7 +219,7 @@
 						<control type="ranges">
 							<width>1208</width>
 							<height>12</height>
-							<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+							<texturebg border="3">colors/blank.png</texturebg>
 							<lefttexture>colors/white.png</lefttexture>
 							<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
 							<righttexture>colors/white.png</righttexture>
@@ -229,7 +229,7 @@
 							<top>6</top>
 							<width>1208</width>
 							<height>6</height>
-							<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+							<texturebg border="3">colors/blank.png</texturebg>
 							<righttexture>colors/white.png</righttexture>
 							<info>Player.Chapters</info>
 						</control>
@@ -307,7 +307,7 @@
 						<left>57</left>
 						<width>1805</width>
 						<height>2</height>
-						<texture colordiffuse="white">separator_horizontal.png</texture>
+						<texture colordiffuse="white">colors/white.png</texture>
 					</control>
 					<!-- Bottom Info -->
 					<control type="group">
@@ -615,7 +615,7 @@
 					<control type="image">
 						<width>440</width>
 						<height>60</height>
-						<texture colordiffuse="$VAR[HighlightBarColor]" border="5">listselect_fo.png</texture>
+						<texture colordiffuse="$VAR[HighlightBarColor]" border="5">colors/white50.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -691,8 +691,8 @@
 					<control type="image">
 						<left>7</left>
 						<top>7</top>
-						<width>19</width>
-						<height>19</height>
+						<width>18</width>
+						<height>18</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 					<control type="label" id="1">
@@ -711,7 +711,7 @@
 						<top>2</top>
 						<width>116</width>
 						<height>68</height>
-						<texture colordiffuse="$VAR[HighlightBarColor]">listselect_fo.png</texture>
+						<texture colordiffuse="$VAR[HighlightBarColor]">colors/white50.png</texture>
 						<bordertexture border="8" colordiffuse="$VAR[HighlightBarColor]">pvr/pvr_focused.png</bordertexture>
 						<bordersize>2</bordersize>
 						<visible>Control.HasFocus(10)</visible>
@@ -720,8 +720,8 @@
 					<control type="image">
 						<left>7</left>
 						<top>7</top>
-						<width>19</width>
-						<height>19</height>
+						<width>18</width>
+						<height>18</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 					<control type="label" id="1">
@@ -804,7 +804,7 @@
 					<control type="image">
 						<width>400</width>
 						<height>60</height>
-						<texture colordiffuse="$VAR[HighlightBarColor]" border="5">listselect_fo.png</texture>
+						<texture colordiffuse="$VAR[HighlightBarColor]" border="5">colors/white50.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -898,7 +898,7 @@
 					<control type="image">
 						<width>400</width>
 						<height>53</height>
-						<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
+						<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 						<include>VisibleFadeAnimation</include>
 					</control>
@@ -955,17 +955,16 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>5</top>
-						<width>20</width>
-						<height>20</height>
+						<top>4</top>
+						<width>18</width>
+						<height>18</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 					<control type="label" id="1">
-						<top>8</top>
-						<width>120</width>
+						<top>10</top>
 						<height>45</height>
-						<font>font12b</font>
-						<textoffsetx>20</textoffsetx>
+						<font>font12</font>
+						<textoffsetx>10</textoffsetx>
 						<textcolor>grey2</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -975,7 +974,7 @@
 						<left>2</left>
 						<width>118</width>
 						<height>53</height>
-						<texture colordiffuse="$VAR[HighlightBarColor]">listselect_fo.png</texture>
+						<texture colordiffuse="$VAR[HighlightBarColor]">colors/white50.png</texture>
 						<bordertexture border="8" colordiffuse="$VAR[HighlightBarColor]">pvr/pvr_focused.png</bordertexture>
 						<bordersize>2</bordersize>
 						<visible>Control.HasFocus(10)</visible>
@@ -983,17 +982,16 @@
 					</control>
 					<control type="image">
 						<left>6</left>
-						<top>5</top>
-						<width>20</width>
-						<height>20</height>
+						<top>4</top>
+						<width>18</width>
+						<height>18</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
 					</control>
 					<control type="label" id="1">
-						<top>8</top>
-						<width>120</width>
+						<top>10</top>
 						<height>45</height>
-						<font>font12b</font>
-						<textoffsetx>20</textoffsetx>
+						<font>font12</font>
+						<textoffsetx>10</textoffsetx>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
@@ -1058,7 +1056,7 @@
 		<control type="image">
 			<top>2</top>
 			<height>68</height>
-			<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
+			<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
 			<visible>Control.HasFocus(10)</visible>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -1121,7 +1119,7 @@
 		<control type="image">
 			<top>2</top>
 			<height>68</height>
-			<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
+			<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
 			<visible>Control.HasFocus(10)</visible>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -1189,5 +1187,19 @@
 	<variable name="LiveTvInfobarTypeOptionsLabelVar">
 		<value condition="String.IsEqual(Skin.String(LiveTV.InfobarType),1)">$LOCALIZE[31361]</value>
 		<value>$LOCALIZE[602]</value>
+	</variable>
+	<variable name="PVRGuideControlsHelpTextVar">
+		<value condition="Control.HasFocus(5001)">$LOCALIZE[19063]</value>
+		<value condition="Control.HasFocus(5002)">$LOCALIZE[19317]</value>
+		<value condition="Control.HasFocus(5003)">$LOCALIZE[19070]</value>
+		<value condition="Control.HasFocus(5004)">$LOCALIZE[19318]</value>
+		<value condition="Control.HasFocus(5005)">$LOCALIZE[19064]</value>
+		<value condition="Control.HasFocus(5006)">$LOCALIZE[19288]</value>
+		<value condition="Control.HasFocus(6001)">$LOCALIZE[19322]</value>
+		<value condition="Control.HasFocus(6002)">$LOCALIZE[19323]</value>
+		<value condition="Control.HasFocus(6003)">$LOCALIZE[19324]</value>
+		<value condition="Control.HasFocus(6005)">$LOCALIZE[19319]</value>
+		<value condition="Control.HasFocus(6006)">$LOCALIZE[19320]</value>
+		<value condition="Control.HasFocus(6007)">$LOCALIZE[19321]</value>
 	</variable>
 </includes>

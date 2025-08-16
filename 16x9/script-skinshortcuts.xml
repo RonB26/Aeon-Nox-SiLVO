@@ -18,11 +18,11 @@
 						<height>810</height>
 						<onright>9000</onright>
 						<scrolltime>0</scrolltime>
-						<itemlayout height="81" width="356">
+						<itemlayout height="81" width="356" condition="!String.IsEqual(Window.Property(groupname),buttonmenu)">
 							<control type="group">
 								<visible>String.IsEmpty(Window(Home).Property(skinshortcuts-management-widget))</visible>
 								<control type="label">
-									<width>360</width>
+									<width>630</width>
 									<height>81</height>
 									<font>font15_title</font>
 									<textoffsetx>20</textoffsetx>
@@ -52,23 +52,23 @@
 								</control>
 							</control>
 						</itemlayout>
-						<focusedlayout height="81" width="550">
+						<focusedlayout height="81" width="550" condition="!String.IsEqual(Window.Property(groupname),buttonmenu)">
 							<control type="image">
 								<width>630</width>
 								<height>81</height>
-								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
+								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
 								<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!ControlGroup(90000).HasFocus">Conditional</animation>
 								<visible>String.IsEmpty(Window(Home).Property(skinshortcuts-management-widget))</visible>
 							</control>
 							<control type="image">
 								<width>355</width>
 								<height>81</height>
-								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
+								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
 								<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="true">Conditional</animation>
 								<visible>!String.IsEmpty(Window(Home).Property(skinshortcuts-management-widget))</visible>
 							</control>
 							<control type="label">
-								<width>360</width>
+								<width>350</width>
 								<height>81</height>
 								<font>font15_title</font>
 								<textoffsetx>20</textoffsetx>
@@ -97,18 +97,45 @@
 								</control>
 							</control>
 						</focusedlayout>
+						<itemlayout height="81" width="356" condition="String.IsEqual(Window.Property(groupname),buttonmenu)">
+							<control type="label">
+								<width>630</width>
+								<height>81</height>
+								<font>font15_title</font>
+								<textoffsetx>20</textoffsetx>
+								<textcolor>grey</textcolor>
+								<label>$VAR[ShortcutsDisabledVar]$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="81" width="550" condition="String.IsEqual(Window.Property(groupname),buttonmenu)">
+							<control type="image">
+								<width>630</width>
+								<height>81</height>
+								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
+								<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!ControlGroup(90000).HasFocus">Conditional</animation>
+							</control>
+							<control type="label">
+								<width>460</width>
+								<height>81</height>
+								<font>font15_title</font>
+								<textoffsetx>20</textoffsetx>
+								<label>$VAR[ShortcutsDisabledVar]$INFO[ListItem.Label]</label>
+								<scroll>true</scroll>
+							</control>
+						</focusedlayout>
 					</control>
 					<control type="grouplist" id="90000">
-						<left>405</left>
+						<left>408</left>
 						<top>32</top>
-						<width>356</width>
+						<width>350</width>
 						<height>81</height>
 						<onright>90001</onright>
 						<onup>Control.Move(211,-1)</onup>
 						<ondown>Control.Move(211,1)</ondown>
 						<orientation>horizontal</orientation>
-						<itemgap>-20</itemgap>
+						<itemgap>-24</itemgap>
 						<visible>String.IsEmpty(Window(Home).Property(skinshortcuts-management-widget))</visible>
+						<animation effect="slide" end="120" condition="String.IsEqual(Window.Property(groupname),buttonmenu)">Conditional</animation>
 						<animation effect="slide" end="0,81" condition="Integer.IsGreater(Container(211).Position,0)">Conditional</animation>
 						<animation effect="slide" end="0,81" condition="Integer.IsGreater(Container(211).Position,1)">Conditional</animation>
 						<animation effect="slide" end="0,81" condition="Integer.IsGreater(Container(211).Position,2)">Conditional</animation>
@@ -127,10 +154,11 @@
 							<height>81</height>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>IconMediumMDRestore</font>
+							<font>IconMediumMD</font>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<label></label>
+							<label></label>
+							<visible>!String.IsEqual(Window.Property(groupname),buttonmenu)</visible>
 						</control>
 						<control type="button" id="302">
 							<texturefocus />
@@ -142,7 +170,7 @@
 							<font>IconMediumMD</font>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<label></label>
+							<label></label>
 						</control>
 						<control type="button" id="301">
 							<texturefocus />
@@ -154,7 +182,8 @@
 							<font>IconMediumMD</font>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<label></label>
+							<label></label>
+							<visible>!String.IsEqual(Window.Property(groupname),buttonmenu)</visible>
 						</control>
 						<control type="button" id="303">
 							<texturefocus />
@@ -166,7 +195,7 @@
 							<font>IconMediumMD</font>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<label></label>
+							<label></label>
 						</control>
 						<control type="button" id="304">
 							<texturefocus />
@@ -178,7 +207,7 @@
 							<font>IconMediumMD</font>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<label></label>
+							<label></label>
 						</control>
 					</control>
 					<control type="group" id="9000">
@@ -189,7 +218,7 @@
 							<top>80</top>
 							<width>1126</width>
 							<height>1</height>
-							<texture colordiffuse="$VAR[ThemeLabelColor]">separator_horizontal.png</texture>
+							<texture colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texture>
 							<visible>String.IsEmpty(Window(Home).Property(skinshortcuts-management-widget))</visible>
 						</control>
 						<control type="group" id="90001">
@@ -221,6 +250,15 @@
 									<width>1125</width>
 									<include>SettingsButtonCommonValues</include>
 									<label>$ADDON[script.skinshortcuts 32048]</label>
+									<visible>!String.IsEqual(Window.Property(groupname),buttonmenu)</visible>
+								</control>
+								<control type="button" id="3080">
+									<description>Reset</description>
+									<width>1125</width>
+									<include>SettingsButtonCommonValues</include>
+									<label>$LOCALIZE[31468]</label>
+									<onclick>SendClick(308)</onclick>
+									<visible>String.IsEqual(Window.Property(groupname),buttonmenu)</visible>
 								</control>
 								<control type="button" id="305">
 									<description>Change label</description>
@@ -243,6 +281,7 @@
 									<include>SettingsButtonCommonValues</include>
 									<label>$ADDON[script.skinshortcuts 32027]</label>
 									<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
+									<visible>!String.IsEqual(Window.Property(groupname),buttonmenu)</visible>
 								</control>
 								<control type="button" id="405">
 									<description>Edit submenu</description>
@@ -257,8 +296,7 @@
 									<include>SettingsButtonCommonValues</include>
 									<label>$ADDON[script.skinshortcuts 32045]</label>
 									<label2>$INFO[Container(211).ListItem.Property(backgroundName)]</label2>
-									<onclick condition="!Skin.HasSetting(WarnedOnFileManager)">SetProperty(Notify,True,Home)</onclick>
-									<onclick condition="!Skin.HasSetting(WarnedOnFileManager)">SetProperty(NotifyFileManager,True,Home)</onclick>
+									<visible>!String.IsEqual(Window.Property(groupname),buttonmenu)</visible>
 								</control>
 								<control type="button" id="510">
 									<description>Choose infoline</description>
@@ -314,7 +352,7 @@
 									<label>$LOCALIZE[31273]</label>
 									<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customProperty,widgetLiveTV)</onclick>
 									<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customProperty,widgetLiveTV)</onclick>
-									<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customValue,true)</onclick>
+									<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))">SetProperty(customValue,True)</onclick>
 									<onclick>SendClick(404)</onclick>
 									<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetLiveTV))</selected>
 									<visible>System.HasPVRAddon + [PVR.HasTVChannels | PVR.HasRadioChannels] + String.IsEqual(Window.Property(groupname),mainmenu)</visible>
@@ -401,7 +439,7 @@
 							<include>SettingsButtonCommonValues</include>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customProperty,widgetPanelInfo)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customProperty,widgetPanelInfo)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo))</selected>
 							<label>31705</label>
@@ -413,7 +451,7 @@
 							<label>31289</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetHide))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle))</visible>
@@ -424,7 +462,7 @@
 							<label>31444</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customProperty,widgetDisableFanart)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customProperty,widgetDisableFanart)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle))</visible>
@@ -452,7 +490,7 @@
 								<onleft>1017</onleft>
 								<onright>1016</onright>
 								<include>SettingsButtonCommonValues</include>
-								<label>$LOCALIZE[31708]</label>
+								<label>$LOCALIZE[31277]</label>
 								<label2>$VAR[WidgetSortbyLabelVar]</label2>
 							</control>
 							<control type="button" id="1016">
@@ -463,7 +501,7 @@
 								<ondown>312</ondown>
 								<onleft>1012</onleft>
 								<include>SettingsButtonCommonValues</include>
-								<label>$LOCALIZE[31709]</label>
+								<label>$LOCALIZE[31278]</label>
 								<label2>$VAR[WidgetSortLabelVar]</label2>
 							</control>
 						</control>
@@ -545,7 +583,7 @@
 							<label>31705</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customProperty,widgetPanelInfo.2)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customProperty,widgetPanelInfo.2)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetPanelInfo.2))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle.2)) + !String.Contains(Container(211).ListItem.Property(widgetStyle.2),List)</visible>
@@ -556,7 +594,7 @@
 							<label>31289</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide.2)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide))">SetProperty(customProperty,widgetHide.2)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide.2))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetHide.2))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetHide.2))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle.2))</visible>
@@ -567,7 +605,7 @@
 							<label>31444</label>
 							<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customProperty,widgetDisableFanart.2)</onclick>
 							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customProperty,widgetDisableFanart.2)</onclick>
-							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customValue,true)</onclick>
+							<onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))">SetProperty(customValue,True)</onclick>
 							<onclick>SendClick(404)</onclick>
 							<selected>!String.IsEmpty(Container(211).ListItem.Property(widgetDisableFanart.2))</selected>
 							<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + !String.IsEmpty(Container(211).ListItem.Property(widgetStyle.2))</visible>
@@ -595,7 +633,7 @@
 								<onleft>2017</onleft>
 								<onright>2016</onright>
 								<include>SettingsButtonCommonValues</include>
-								<label>$LOCALIZE[31708]</label>
+								<label>$LOCALIZE[31277]</label>
 								<label2>$VAR[WidgetSortby2LabelVar]</label2>
 							</control>
 							<control type="button" id="2016">
@@ -606,7 +644,7 @@
 								<ondown>2051</ondown>
 								<onleft>2012</onleft>
 								<include>SettingsButtonCommonValues</include>
-								<label>$LOCALIZE[31709]</label>
+								<label>$LOCALIZE[31278]</label>
 								<label2>$VAR[WidgetSort2LabelVar]</label2>
 							</control>
 						</control>
@@ -628,5 +666,8 @@
 		<control type="label" id="500">
 			<include>HiddenObject</include>
 		</control>
+		<include content="DebugWindow">
+			<param name="visible">Window.IsDialogTopMost(script-skinshortcuts.xml)</param>
+		</include>
 	</controls>
 </window>

@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">21</defaultcontrol>
-	<include>DialogOpenCloseAnimation</include>
 	<controls>
+		<include>DimBackground</include>
 		<control type="group">
 			<width>240</width>
 			<height>520</height>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<animation effect="slide" start="0,0" end="720,0" time="320" tween="cubic" easing="inout" condition="Window.IsActive(virtualkeyboard)">Conditional</animation>
-			<control type="image">
-				<left>-1</left>
-				<width>242</width>
-				<height>519</height>
-				<texture>colors/black.png</texture>
-				<bordersize>1</bordersize>
-				<bordertexture border="1" infill="false" colordiffuse="$VAR[ThemeBorderColor]">colors/border_frame.png</bordertexture>
-			</control>
+			<include>DialogOpenCloseAnimation</include>
+			<include content="BackPanel">
+				<param name="left">-4</param>
+				<param name="top">-4</param>
+				<param name="width">248</param>
+				<param name="height">528</param>
+			</include>
 			<control type="image">
 				<top>470</top>
 				<width>240</width>
 				<height>50</height>
-				<texture>colors/white10.png</texture>
+				<texture>colors/white25.png</texture>
 			</control>
 			<control type="label" id="1">
 				<top>10</top>
@@ -32,7 +30,7 @@
 				<font>font15_title</font>
 				<textcolor>grey2</textcolor>
 				<scroll>true</scroll>
-				<scrollspeed>20</scrollspeed>
+				<scrollspeed>40</scrollspeed>
 			</control>
 			<control type="label" id="4">
 				<top>470</top>
@@ -143,12 +141,12 @@
 					<orientation>horizontal</orientation>
 					<top>320</top>
 					<control type="button" id="23">
-						<label></label>
+						<label></label>
 						<onup>20</onup>
 						<ondown>11</ondown>
 						<width>120</width>
 						<textwidth>190</textwidth>
-						<font>IconSmall</font>
+						<font>IconMediumMD</font>
 						<include>Objects_SingleKeyOff</include>
 					</control>
 					<control type="button" id="21">
@@ -163,5 +161,6 @@
 				</control>
 			</control>
 		</control>
+		<include>DebugWindow</include>
 	</controls>
 </window>
